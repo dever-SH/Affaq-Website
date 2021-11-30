@@ -1,4 +1,4 @@
-<!-- باقي الايميل ما ضبط  -->
+
 <?php 
 session_start();
 ?> 
@@ -24,9 +24,7 @@ session_start();
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script> 
             // php line doesn't read js file, need wifi conn,dont chanage his place
-            function success(){
-            swal("نشكرك", "تم ارسال ملاحظتك بنجاح", "success");
-                } 
+            function success(){ swal("نشكرك", "تم ارسال ملاحظتك بنجاح", "success");  } 
         </script>
         <!------Header------>
     <section class="header">
@@ -112,7 +110,6 @@ session_start();
         </div>
     </section>
                     <!---------- Footer  ---------------->
-
     <section class="footer">
      <div class="row2">
         <div id="connect" class="commentSection ">
@@ -120,25 +117,26 @@ session_start();
             <form action="comment.php" method="post">
                 <h3>للملاحظات والإستفسارات</h3>
                     <?php 
-                    if(isset($_SESSION['status'])){
-                        
-                       echo' <script>success();</script>';
-                       
+                    if(isset($_SESSION['status'])){            
+                       echo' <script>success();</script>';            
                         unset( $_SESSION['status']);
                     }
                      ?>
-                <label for="email"><p>الايميل</p></label>
+                <label for="name"><p>الإسم:</p></label>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="email"><p>الإيميل</p></label>
                 <input type="email" id="email" name="email" placeholder="example@example.com" ><br>
 
                 <label for="subject"><p>اختر الموضوع</p></label>
                     <select id="subject" name="subject" >
-                        <option value="note">ملاحظة</option>
-                        <option value="problem">مشكلة</option>
-                        <option value="other">آخر</option>
+                        <option value="NOTE">ملاحظة</option>
+                        <option value="PROBLEM">مشكلة</option>
+                        <option value="OTHER">آخر</option>
                     </select>
                 
                 <label for="content"> <p>المحتوى</p></label>
-                <textarea name="content" rows="5" cols="32" placeholder="هنا"></textarea><br>
+                <textarea name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                 <input type="submit" name="submit" value="إرسال">
             </form>
