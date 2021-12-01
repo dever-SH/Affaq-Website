@@ -339,7 +339,7 @@ https://mycolor.space/?hex=%23687A6E&sub=1
 .contactSection p{
     font-size: 12px;
 }
-input[type="submit"]{
+.commentSection input[type="submit"]{
    width: 100px;
    border: 1px #fff solid;
    border-radius: 5px;
@@ -347,13 +347,14 @@ input[type="submit"]{
    margin-right: 30%;
    transition: 0.5s;
 }
-input[type="submit"]:hover{
-    background-color: #9DB0A3;
+.commentSection input[type="submit"]:hover{
+    background-color: #e7cea9;
 }
-input[type="email"],input[type="text"] ,select,textarea{
+.commentSection input[type="email"],.commentSection input[type="text"] ,select,
+.content{
     border-radius: 5px;
 }
-select,textarea{
+.commentSection select,.content{
     width: 100%;
     text-align: right;
 }
