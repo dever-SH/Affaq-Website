@@ -1,19 +1,14 @@
 /* 
 used Colors from
-
 https://mycolor.space/?hex=%23687A6E&sub=1
-
 #687A6E
 #9DB0A3
 #5E7989
 #9AAEBB
-
 */
-
 *{
     margin: 0; 
     padding: 0; 
-    /* font */
     font-family: 'IBM Plex Sans Arabic', sans-serif;   
 }
 
@@ -34,6 +29,9 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
 /****************Header style *************/
 
 
+/* ********Start of main Page Style******* */
+
+ /****************Header style *************/
 .header{
     min-height: 100vh;
     max-width:100%;
@@ -44,7 +42,6 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     background-size: cover;
     position: relative;
 }
-
 .wave{
     position: absolute;
     bottom: 0;
@@ -140,8 +137,7 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
 .scrolling-active .nav-links ol li a::after{
     background: rgba(10, 37, 54,0.9);
 }
-
-           /* **************** midmenu*********** */
+ /* **************** midmenu*********** */
 .midmenu{
     width: 80%;
     margin: auto;
@@ -186,8 +182,7 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     width: 50px;
     height: 80px; 
 }
-                    /************ map style ***********/
-
+/************ map style ***********/
 .map{
     background: #fff;
     padding: 30px;
@@ -196,7 +191,6 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     min-height: 10vh;
     width: 85%;
 } 
-    /*font*/
 .textbox{
     position: relative ;
     width: 200px;
@@ -215,7 +209,6 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     color: #525543;
     font-size: 16px; 
 }      
-/* map background */
 .mapdiv{
     position: relative;
     float: left;
@@ -229,10 +222,9 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     margin-bottom: 30px;
     margin-left: 5%;
     box-sizing: border-box;
-
 }
 .mapdiv:hover{
-box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
+    box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
 }
 .mapdiv svg a{
     color: #e84f2c;
@@ -250,7 +242,6 @@ box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
 }
 .cls-1,.cls-5{
     fill: #7ea189;
-    /* fill:#10a89f; */
 }
 .cls-2{
     fill:#eca435;
@@ -261,8 +252,7 @@ box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
 .cls-4{
     fill:#e84f2c;
 }
-
-           /* *************footer************ */
+/* *************footer************ */
 .footer{
     position: relative;
     bottom: 0;
@@ -277,7 +267,7 @@ box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
 .row2{
     overflow: auto;
 }
-.footer-content , .commentSection { 
+.footer-content , .contactSection { 
     width: 46%; 
     margin:0; 
     display: inline-flex;
@@ -320,7 +310,6 @@ box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
 .socials a i{
     font-size: 1.1rem;
     transition: color .4s ease;
-
 }
 .socials a:hover i{
     color:#5E7989;
@@ -348,7 +337,7 @@ box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
     opacity: .4;
     font-weight: 200;
 }
-.commentSection{
+.contactSection{
     margin: auto;
     text-align: right;
     position: relative;
@@ -359,16 +348,16 @@ box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
     justify-content: center;
     flex-direction: column;
 }
-.commentSection h3{
+.contactSection h3{
     font-size: 16px;
     font-weight: 400;
     line-height: 3rem;
     text-align: center;
 }
-.commentSection p{
+.contactSection p{
     font-size: 12px;
 }
-.commentSection input[type="submit"]{
+.contactSection input[type="submit"]{
    width: 100px;
    border: 1px #fff solid;
    border-radius: 5px;
@@ -376,14 +365,14 @@ box-shadow:0 0 15px 0 rgba(207, 211, 126, 0.2);
    margin-right: 30%;
    transition: 0.5s;
 }
-.commentSection input[type="submit"]:hover{
+.contactSection input[type="submit"]:hover{
     background-color: #e7cea9;
 }
-.commentSection input[type="email"],.commentSection input[type="text"] ,select,
-.content{
+.contactSection input[type="email"],.contactSection input[type="text"] ,select,
+textarea{
     border-radius: 5px;
 }
-.commentSection select,.content{
+.contactSection select,.content{
     width: 100%;
     text-align: right;
 }
@@ -841,3 +830,4 @@ input[type=email], input[type=password] {
   }
 
   /****************************************************************/
+/* ******* The end of main page style ********** */
