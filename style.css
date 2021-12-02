@@ -365,14 +365,14 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     background-color: #e7cea9;
 }
 .contactSection input[type="email"],.contactSection input[type="text"] ,select,
-.content{
+.textarea{
     border-radius: 5px;
 }
 .contactSection select,.content{
     width: 100%;
     text-align: right;
 }
-
+/* ********End of mainPage style********** */
 /* sign form format */
 
 .signDiv
