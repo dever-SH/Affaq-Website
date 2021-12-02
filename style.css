@@ -363,7 +363,7 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
    transition: 0.5s;
 }
 .contactSection input[type="submit"]:hover{
-    background-color: #e7cea9;
+    background-color: #9DB0A3;
 }
 .contactSection input[type="email"],.contactSection input[type="text"],
 select, .content{

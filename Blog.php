@@ -1,5 +1,9 @@
 <?php
     $conn = new mysqli("localhost", "root", "", "afaqwebsite");
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+      echo "Connected successfully";
 ?>
 <!DOCTYPE html>
 <html dir="rtl">
@@ -76,7 +80,7 @@
     <div class="blogsh">
         <div class="center-columnsh">
 
-            <?php 
+            <?php if($conn) {
                 $sb = 'SELECT * FROM blog';
                 $rb = mysqli_query($conn, $sb);
 
@@ -107,6 +111,7 @@
                         </article> </div>'
                     ;
                 }
+            }
 
 
                 ?>

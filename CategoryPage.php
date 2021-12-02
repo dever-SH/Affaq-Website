@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Picture/tabIcon.svg">
-    <title>الــدول</title>
+    <title>السياحات</title>
 
     <title>Affaq Website</title>
     <!-- style links -->
