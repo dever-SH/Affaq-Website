@@ -236,7 +236,7 @@
             $r2 = mysqli_fetch_array($result, MYSQLI_ASSOC);
             if($r2["pass"] == $_POST['password']) {
                 $_SESSION["em"] = $_POST['em'];
-                echo '<script> window.open("profile.php");</script>'; 
+                echo '<script> window.open("profile.html");</script>'; 
             } 
         }
         
