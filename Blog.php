@@ -1,4 +1,4 @@
-<?php $conn = new mysqli("localhost", "root", "", "afaqwebsite"); ?>
+<?php $conn = new mysqli("sql104.epizy.com", "epiz_30503805", "HTh9fu4kjdC0J", "epiz_30503805_afaq"); ?>
 
 <!DOCTYPE html>
 <html dir="rtl">
@@ -76,15 +76,15 @@
         <div class="center-columnsh">
 
             <?php if($conn) {
-                $sb = 'SELECT * FROM blog';
+                $sb = 'SELECT * FROM blogs';
                 $rb = mysqli_query($conn, $sb);
 
                 while($rb2 = mysqli_fetch_array($rb, MYSQLI_ASSOC)) { 
-                    $sus = 'SELECT username from useres where email = "'.$rb2["emaill"].'"';
+                    $sus = 'SELECT username from users where email = "'.$rb2["emaill"].'"';
                     $rus = mysqli_query($conn, $sus);  
                     $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
 
-                    $sid = 'SELECT bid from blog where btitle = "'.$rb2["btitle"].'"';
+                    $sid = 'SELECT bid from blogs where btitle = "'.$rb2["btitle"].'"';
                     $rid = mysqli_query($conn, $sid);  
                     $rid2 = mysqli_fetch_array($rid, MYSQLI_ASSOC);
                     $simg = "SELECT img from imgs where id ='".$rus2["username"]."".$rid2["bid"]."'";

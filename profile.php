@@ -68,19 +68,19 @@
             <div class="pInfo">
                 <h3>
                     <?php 
-                    $s = "SELECT username from useres where email = '".$em."'";
-                    $r = mysqli_query($conn, $s);
-                    $r2 = mysqli_fetch_array($r, MYSQLI_ASSOC);
-                    echo'@'.$r2["username"];
-                ?>
+                        $usernameQ = "SELECT username from users where email = '".$em."'";
+                        $usernameC = mysqli_query($conn, $usernameQ);
+                        $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
+                        echo'@'.$usernameR["username"];
+                    ?>
                 </h3>
                 <p>
                     <?php 
-                    $s = "SELECT bio from useres where email = '".$em."'";
-                    $r = mysqli_query($conn, $s);
-                    $r2 = mysqli_fetch_array($r, MYSQLI_ASSOC);
-                    print ($r2["bio"]);
-                ?>
+                        $bioQ = "SELECT bio from users where email = '".$em."'";
+                        $bioC = mysqli_query($conn, $bioQ);
+                        $bioR = mysqli_fetch_array($bioC, MYSQLI_ASSOC);
+                        print ($bioR["bio"]);
+                    ?>
                 </p>
             </div>
             <div class="infoRec">
@@ -88,10 +88,10 @@
                 <div class="infoNum" id="tripNum" onclick="showHide('blogs', 'imgs')">
                     <h1 class="Num">
                         <?php 
-                        $s = "SELECT count(btitle) from blog where emaill = '".$em."'";
-                        $r = mysqli_query($conn, $s);
-                        $r2 = mysqli_fetch_array($r, MYSQLI_ASSOC);
-                        echo $r2["count(btitle)"];
+                        $countQ = "SELECT count(title) from blogs where email = '".$em."'";
+                        $countC = mysqli_query($conn, $countQ);
+                        $countR = mysqli_fetch_array($countC, MYSQLI_ASSOC);
+                        echo $countR["count(title)"];
                     ?>
                     </h1>
                     <h4 class="infoTitle" id="tripT">الرحلات</h4>
@@ -107,32 +107,33 @@
             <div class="profileImg"></div>
             <div class="blogs" id="blogs">
                 <?php 
-                    $s = 'SELECT * FROM blog where emaill = "'.$em.'"';
-                    $r = mysqli_query($conn, $s);
+                    $blogsQ = 'SELECT * FROM blogs where email = "'.$em.'"';
+                    $blogsC = mysqli_query($conn, $blogsQ);
 
-                    $sus = 'SELECT username from useres where email = "'.$em.'"';
-                    $rus = mysqli_query($conn, $sus);  
-                    $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
+                    $usernameQ = 'SELECT username from users where email = "'.$em.'"';
+                    $usernameC = mysqli_query($conn, $usernameQ);  
+                    $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
 
-                    while($r2 = mysqli_fetch_array($r, MYSQLI_ASSOC)) { 
-                        $sid = 'SELECT bid from blog where btitle = "'.$r2["btitle"].'"';
-                        $rid = mysqli_query($conn, $sid);  
-                        $rid2 = mysqli_fetch_array($rid, MYSQLI_ASSOC);
-                        $simg = "SELECT img from imgs where id ='".$rus2["username"]."".$rid2["bid"]."'";
-                        $rimg = mysqli_query($conn, $simg);
+                    while($blogsR = mysqli_fetch_array($blogsC, MYSQLI_ASSOC)) { 
+                        $idQ = 'SELECT id from blogs where title = "'.$blogsR["btitle"].'"';
+                        $idC = mysqli_query($conn, $idQ);  
+                        $idR = mysqli_fetch_array($idC, MYSQLI_ASSOC);
+
+                        $imgQ = "SELECT img from imgs where id ='".$usernameR["username"]."".$idR["id"]."'";
+                        $imgC = mysqli_query($conn, $imgQ);
                         echo '
                         <div class="blog">
                         <details>
                             <summary>
-                                <h2 class="blogTitle">'.$r2["btitle"].'</h2>
+                                <h2 class="blogTitle">'.$blogsR["title"].'</h2>
                             </summary>
-                            <p class="blogBody"> <br> '.$r2["bcontent"].
+                            <p class="blogBody"> <br> '.$blogsR["content"].
                             '<br> <br> <div class = "blogimgs">'
                             ;
 
                             
-                            while($rimg2 = mysqli_fetch_array($rimg, MYSQLI_ASSOC)){
-                                echo '<div style="background-image: url(\'blogsImgs/'.$rimg2["img"].'\');"></div>';
+                            while($imgR = mysqli_fetch_array($imgC, MYSQLI_ASSOC)){
+                                echo '<div style="background-image: url(\'blogsImgs/'.$imgR["img"].'\');"></div>';
                             }
                             echo'
                             </div>
@@ -146,16 +147,15 @@
             <div class="imgs" id="imgs">
                 <div class="allimgs">
                     <?php 
-                    $sus = 'SELECT username from useres where email = "'.$em.'"';
-                    $rus = mysqli_query($conn, $sus);  
-                    $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
-                    $s = "SELECT img from imgs where id LIKE '".$rus2["username"]."%'";
-                    $r = mysqli_query($conn, $s);
-                    while($rr2 = mysqli_fetch_array($r, MYSQLI_ASSOC)){
-                        echo'
-                        <div style="background-image: url(\'blogsImgs/'.$rr2["img"].'\');"></div>';
-                    }
-                ?>
+                        $usernameQ = 'SELECT username from users where email = "'.$em.'"';
+                        $usernameC = mysqli_query($conn, $usernameQ);  
+                        $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
+
+                        $imgQ = "SELECT img from imgs where id LIKE '".$usernameR["username"]."%'";
+                        $imgC = mysqli_query($conn, $imgQ);
+                        while($imgR = mysqli_fetch_array($imgC, MYSQLI_ASSOC))
+                            echo'<div style="background-image: url(\'blogsImgs/'.$imgR["img"].'\');"></div>';
+                    ?>
                 </div>
             </div>
         </div>
@@ -216,8 +216,7 @@
                     <div class="Download">
                         <p>حمل التطبيق </p>
                         <a href="#" onclick="info(); return false;"><img src="Picture/App-store-desktop.png"></a>
-                        <a href="#" onclick="info(); return false;"><img
-                                src="Picture/google-play-blanco-desktop.png"></a>
+                        <a href="#" onclick="info(); return false;"><img src="Picture/google-play-blanco-desktop.png"></a>
                     </div>
                 </div>
             </div>
@@ -226,13 +225,17 @@
             </div>
         </section>
     </div>
+
     <div class="insertBlog" id="insertBlog">
         <form class="newBlog" method="post" action="profile.php" enctype="multipart/form-data">
             <label for="blogTitle">عنوان المدونة</label>
             <input type="text" id="blogTitle" required name="bt"> <br>
+
             <input type="text" placeholder="وصف التدوينة" required id="blogDes" name="bdes"> <br><br>
             <textarea placeholder="اكتب تدوينتك هنا" required name="bc"></textarea>
+
             <input type="file" style="margin-left: 25%;" name="bimg[]" multiple><br><br>
+
             <h1><a href="#" onclick="hideBlog(insertBlog, allPage);" class="closein bi bi-x"></a></h1>
             <input type="submit" value="نشـــر" class="blogSubmit" name="share"> <input type="reset" value="مســح"
                 class="blogReset">
@@ -244,24 +247,25 @@
     <?php
         if(isset($_POST['share'])) {
             $bt = $_POST['bt']; $bc = $_POST['bc']; $bd = $_POST['bdes'];
-            $sql = 'INSERT into blog (emaill, btitle, bcontent, bdes) values  ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'")';
-            $result = mysqli_query($conn, $sql);  
-            if($result) {
-                $sid = 'SELECT bid from blog where btitle = "'.$bt.'"';
-                $rid = mysqli_query($conn, $sid);  
-                $rid2 = mysqli_fetch_array($rid, MYSQLI_ASSOC);
+            $insertQ = 'INSERT into blogs (email, title, content, descr) values  ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'")';
+            $insertC = mysqli_query($conn, $sql);  
+            if($insertC) {
+                $idQ = 'SELECT id from blogs where title = "'.$bt.'"';
+                $idC = mysqli_query($conn, $idQ);  
+                $idR = mysqli_fetch_array($idC, MYSQLI_ASSOC);
 
-                $sus = 'SELECT username from useres where email = "'.$em.'"';
-                $rus = mysqli_query($conn, $sus);  
-                $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
+                $usernameQ = 'SELECT username from users where email = "'.$em.'"';
+                $usernameC = mysqli_query($conn, $usernameQ);  
+                $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
                 
                     foreach($_FILES['bimg']['name'] as $key=>$val){ 
                         $fileName = basename($_FILES['bimg']['name'][$key]); 
                         $tempname = $_FILES["bimg"]["tmp_name"];    
                         $folder = "blogsImgs/".$fileName;
+
                         if(move_uploaded_file($_FILES["bimg"]["tmp_name"][$key], $folder)) {
-                            $sq = 'INSERT into imgs (id, img) values ("'.$rus2["username"].''.$rid2["bid"].'", "'.$fileName.'")';
-                            $rsql = mysqli_query($conn, $sq);  
+                            $insertQ = 'INSERT into imgs (id, img) values ("'.$usernameR["username"].''.$idR["id"].'", "'.$fileName.'")';
+                            $insertC = mysqli_query($conn, $insertQ);  
                         }
                     }
             } 
