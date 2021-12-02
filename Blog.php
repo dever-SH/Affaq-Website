@@ -36,9 +36,9 @@
             <div class="nav-links">
                 <ol>
                     <li><a href="profile.php" target="_blank_">حسابي</a></li> <!--  هنا صفحة شادن-->
-                    <li><a href="#connect">تواصل معنا</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
                     <li><a href="#us">عنّا</a></li>
-                    <li><a href="MainPage.html">الرئيسية</a></li>
+                    <li><a href="Main.php">الرئيسية</a></li>
                 </ol>
             </div>
         </nav>
@@ -112,62 +112,71 @@
                 ?>
         </div>
     </div>
-    <!---------- Footer  ---------------->
+     <!---------- Footer  ---------------->
+     <section class="footer">
+                    <div class="row2">
+                        <div id="contact" class="contactSection ">
 
-    <section class="footer">
-            <div class="row2">
-                <div id="connect" class="commentSection ">
-                    <form>
-                        <h3>للملاحظات والإستفسارات</h3>
+                            <form action="contact.php" method="post">
+                                <h3>للملاحظات والإستفسارات</h3>
+                                <?php 
+                    if(isset($_SESSION['status'])){            
+                       echo' <script>success();</script>';            
+                        unset( $_SESSION['status']);
+                    }
+                     ?>
+                                <label for="name">
+                                    <p>الإسم:</p>
+                                </label>
+                                <input type="text" id="name" name="name"><br>
 
-                        <label for="email">
-                            <p>الايميل</p>
-                        </label>
-                        <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+                                <label for="email">
+                                    <p>الإيميل</p>
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="example@example.com"><br>
 
-                        <label for="Subject">
-                            <p>اختر الموضوع</p>
-                        </label>
-                        <select id="Subject" name="Subject">
-                            <option value="note">ملاحظة</option>
-                            <option value="problem">مشكلة</option>
-                            <option value="other">آخر</option>
-                        </select>
+                                <label for="subject">
+                                    <p>اختر الموضوع</p>
+                                </label>
+                                <select id="subject" name="subject">
+                                    <option value="NOTE">ملاحظة</option>
+                                    <option value="PROBLEM">مشكلة</option>
+                                    <option value="OTHER">آخر</option>
+                                </select>
+                                <label for="content">
+                                    <p>المحتوى</p>
+                                </label>
+                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
-                        <label for="comment">
-                            <p>المحتوى</p>
-                        </label>
-                        <textarea class="comment" name="comment" rows="5" cols="32" placeholder="هنا"></textarea><br>
+                                <input type="submit" name="submit" value="إرسال">
+                            </form>
+                        </div>
+                        <div id="us" class="footer-content">
+                            <h3>أفــــــــاق</h3>
+                            <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
+                                وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
 
-                        <input type="submit" value="إرسال" class="footersub">
-                    </form>
-                </div>
-
-                <div id="us" class="footer-content">
-                    <h3>أفــــــــاق</h3>
-                    <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
-                        وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
-
-
-                    <ul class="socials">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                        <p>تابعنا على</p>
-                    </ul>
-                    <div class="Download">
-                        <p>حمل التطبيق </p>
-                        <a href=""><img src="Picture/App-store-desktop.png"></a>
-                        <a href=""><img src="Picture/google-play-blanco-desktop.png"></a>
+                            <ul class="socials">
+                                <p>تابعنا على</p>
+                                <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                                <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
+                                            class="fa fa-youtube"></i></a></li>
+                            </ul>
+                            <div class="Download">
+                                <p>حمل التطبيق </p>
+                                <a href="#" onclick="info(); return false;"><img
+                                        src="Picture/App-store-desktop.png"></a>
+                                <a href="#" onclick="info(); return false;"><img
+                                        src="Picture/google-play-blanco-desktop.png"></a>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="footer-bottom">
+                        <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
                     </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
-            </div>
-        </section>
+                </section>
     <script>
     // for nav bar color
     window.addEventListener('scroll', function() {

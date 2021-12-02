@@ -26,18 +26,13 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
 
 ::-webkit-scrollbar-thumb:hover { background-color: #687A6E; }
 
-/****************Header style *************/
-
-
 /* ********Start of main Page Style******* */
 
  /****************Header style *************/
-.header{
-    min-height: 100vh;
-    max-width:100%;
-    background-image: linear-gradient(
-        rgba(202, 227, 233, 0.5),rgba(202, 227, 233, 0.5))
-        ,url("Picture/background.jpg");
+ .header {
+    min-height: 300px;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(202, 227, 233, 0.5), rgba(202, 227, 233, 0.5)), url("Picture/background.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -369,7 +364,7 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     background-color: #e7cea9;
 }
 .contactSection input[type="email"],.contactSection input[type="text"] ,select,
-textarea{
+.content{
     border-radius: 5px;
 }
 .contactSection select,.content{
@@ -433,7 +428,7 @@ input[type=email], input[type=password] {
 .submitButton {
     position : absolute ;
     width : 131px; height : 30px;
-    margin: 20% auto auto -55%;
+    margin: 95% auto auto -13%;
     padding: 5px 10px;
     font-size: 10px;
 }

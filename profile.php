@@ -4,39 +4,27 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="ar">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Picture/tabIcon.svg">
+    <title>حســــابي</title>
+
+    <title>Affaq Website</title>
+    <!-- style links -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <!--font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-
-    <!-- <link href="profileStyle.css" rel="stylesheet"> -->
-    <link href="style.css" rel="stylesheet">
-    <!-- <link href="style.css" rel="stylesheet"> -->
     <script src="Js.js"></script>
 
-    <title>حســــابي</title>
-    <link rel="icon" type="image/png" href="picture/tabIcon.svg">
-
     <style>
-    .header {
-        min-height: 300px;
-        max-width: 100%;
-        background-image: linear-gradient(rgba(202, 227, 233, 0.5), rgba(202, 227, 233, 0.5)), url("Picture/background.jpg");
-        background-position: center;
-        background-size: cover;
-        position: relative;
-    }
-
     .closein {
         cursor: pointer;
         position: absolute;
@@ -55,10 +43,9 @@
             <a href=""><img src="Picture/logo2.svg"> </a>
             <div class="nav-links">
                 <ol>
-                    <li><a href="profile.php">حسابي</a></li>
                     <li><a href="#connect">تواصل معنا</a></li>
                     <li><a href="#us">عنّا</a></li>
-                    <li><a href="MainPage.html">الرئيسية</a></li>
+                    <li><a href="Main.php">الرئيسية</a></li>
                 </ol>
             </div>
 
@@ -168,61 +155,70 @@
         
 
         <!---------- Footer  ---------------->
-
         <section class="footer">
-            <div class="row2">
-                <div id="connect" class="commentSection ">
-                    <form>
-                        <h3>للملاحظات والإستفسارات</h3>
+                    <div class="row2">
+                        <div id="contact" class="contactSection ">
 
-                        <label for="email">
-                            <p>الايميل</p>
-                        </label>
-                        <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+                            <form action="contact.php" method="post">
+                                <h3>للملاحظات والإستفسارات</h3>
+                                <?php 
+                    if(isset($_SESSION['status'])){            
+                       echo' <script>success();</script>';            
+                        unset( $_SESSION['status']);
+                    }
+                     ?>
+                                <label for="name">
+                                    <p>الإسم:</p>
+                                </label>
+                                <input type="text" id="name" name="name"><br>
 
-                        <label for="Subject">
-                            <p>اختر الموضوع</p>
-                        </label>
-                        <select id="Subject" name="Subject">
-                            <option value="note">ملاحظة</option>
-                            <option value="problem">مشكلة</option>
-                            <option value="other">آخر</option>
-                        </select>
+                                <label for="email">
+                                    <p>الإيميل</p>
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="example@example.com"><br>
 
-                        <label for="comment">
-                            <p>المحتوى</p>
-                        </label>
-                        <textarea name="comment" rows="5" cols="32" placeholder="هنا"></textarea><br>
+                                <label for="subject">
+                                    <p>اختر الموضوع</p>
+                                </label>
+                                <select id="subject" name="subject">
+                                    <option value="NOTE">ملاحظة</option>
+                                    <option value="PROBLEM">مشكلة</option>
+                                    <option value="OTHER">آخر</option>
+                                </select>
+                                <label for="content">
+                                    <p>المحتوى</p>
+                                </label>
+                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
-                        <input type="submit" value="إرسال" class="footersub">
-                    </form>
-                </div>
+                                <input type="submit" name="submit" value="إرسال">
+                            </form>
+                        </div>
+                        <div id="us" class="footer-content">
+                            <h3>أفــــــــاق</h3>
+                            <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
+                                وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
 
-                <div id="us" class="footer-content">
-                    <h3>أفــــــــاق</h3>
-                    <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
-                        وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
-
-
-                    <ul class="socials">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                        <p>تابعنا على</p>
-                    </ul>
-                    <div class="Download">
-                        <p>حمل التطبيق </p>
-                        <a href=""><img src="Picture/App-store-desktop.png"></a>
-                        <a href=""><img src="Picture/google-play-blanco-desktop.png"></a>
+                            <ul class="socials">
+                                <p>تابعنا على</p>
+                                <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                                <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
+                                            class="fa fa-youtube"></i></a></li>
+                            </ul>
+                            <div class="Download">
+                                <p>حمل التطبيق </p>
+                                <a href="#" onclick="info(); return false;"><img
+                                        src="Picture/App-store-desktop.png"></a>
+                                <a href="#" onclick="info(); return false;"><img
+                                        src="Picture/google-play-blanco-desktop.png"></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
-            </div>
-        </section>
+                    <div class="footer-bottom">
+                        <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
+                    </div>
+                </section>
     </div>
     <div class="insertBlog" id="insertBlog">
         <form class="newBlog" method="post" action="profile.php" enctype="multipart/form-data">

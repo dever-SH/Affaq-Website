@@ -7,7 +7,7 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Picture/tabIcon.svg">
-    <title>مدونة أفـــــاق</title>
+    <title>صور أفـــــاق</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,7 +38,7 @@
                     <li><a href="profile.php" target="_blank_">حسابي</a></li> <!--  هنا صفحة شادن-->
                     <li><a href="#connect">تواصل معنا</a></li>
                     <li><a href="#us">عنّا</a></li>
-                    <li><a href="MainPage.html">الرئيسية</a></li>
+                    <li><a href="Main.php">الرئيسية</a></li>
                 </ol>
             </div>
         </nav>
@@ -84,75 +84,71 @@
                 echo '<img src="blogsImgs/'.$rimg2["img"].'">';
            ?>
     </div>
-   <!---------- Footer  ---------------->
-   <section class="footer">
-            <div class="row2">
-                <div id="connect" class="commentSection ">
+        <!---------- Footer  ---------------->
+        <section class="footer">
+                    <div class="row2">
+                        <div id="contact" class="contactSection ">
 
-                    <form action="comment.php" method="post">
-                        <h3>للملاحظات والإستفسارات</h3>
-                        <?php 
+                            <form action="contact.php" method="post">
+                                <h3>للملاحظات والإستفسارات</h3>
+                                <?php 
                     if(isset($_SESSION['status'])){            
                        echo' <script>success();</script>';            
                         unset( $_SESSION['status']);
                     }
                      ?>
-                        <label for="name">
-                            <p>الإسم:</p>
-                        </label>
-                        <input type="text" id="name" name="name"><br>
+                                <label for="name">
+                                    <p>الإسم:</p>
+                                </label>
+                                <input type="text" id="name" name="name"><br>
 
-                        <label for="email">
-                            <p>الإيميل</p>
-                        </label>
-                        <input type="email" id="email" name="email" placeholder="example@example.com"><br>
+                                <label for="email">
+                                    <p>الإيميل</p>
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="example@example.com"><br>
 
-                        <label for="subject">
-                            <p>اختر الموضوع</p>
-                        </label>
-                        <select id="subject" name="subject">
-                            <option value="NOTE">ملاحظة</option>
-                            <option value="PROBLEM">مشكلة</option>
-                            <option value="OTHER">آخر</option>
-                        </select>
+                                <label for="subject">
+                                    <p>اختر الموضوع</p>
+                                </label>
+                                <select id="subject" name="subject">
+                                    <option value="NOTE">ملاحظة</option>
+                                    <option value="PROBLEM">مشكلة</option>
+                                    <option value="OTHER">آخر</option>
+                                </select>
+                                <label for="content">
+                                    <p>المحتوى</p>
+                                </label>
+                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
-                        <label for="content">
-                            <p>المحتوى</p>
-                        </label>
-                        <textarea name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                                <input type="submit" name="submit" value="إرسال">
+                            </form>
+                        </div>
+                        <div id="us" class="footer-content">
+                            <h3>أفــــــــاق</h3>
+                            <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
+                                وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
 
-                        <input type="submit" name="submit" value="إرسال">
-                    </form>
-
-                </div>
-
-                <div id="us" class="footer-content">
-                    <h3>أفــــــــاق</h3>
-                    <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
-                        وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
-
-
-                    <ul class="socials">
-                        <p>تابعنا على</p>
-                        <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-                        <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
-                                    class="fa fa-youtube"></i></a></li>
-                        <!-- <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li> -->
-                    </ul>
-                    <div class="Download">
-                        <p>حمل التطبيق </p>
-                        <a href="#" onclick="info(); return false;"><img src="Picture/App-store-desktop.png"></a>
-                        <a href="#" onclick="info(); return false;"><img
-                                src="Picture/google-play-blanco-desktop.png"></a>
+                            <ul class="socials">
+                                <p>تابعنا على</p>
+                                <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                                <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
+                                            class="fa fa-youtube"></i></a></li>
+                            </ul>
+                            <div class="Download">
+                                <p>حمل التطبيق </p>
+                                <a href="#" onclick="info(); return false;"><img
+                                        src="Picture/App-store-desktop.png"></a>
+                                <a href="#" onclick="info(); return false;"><img
+                                        src="Picture/google-play-blanco-desktop.png"></a>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="footer-bottom">
+                        <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
                     </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
-            </div>
-        </section>
+                </section>
 
     <script>
     // for nav bar color
