@@ -15,15 +15,14 @@
     <!-- style links -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!--font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <script src="Js.js"></script>
-
+    <link href="Js.js" rel="javascript">
     <style>
     .closein {
         cursor: pointer;
@@ -37,6 +36,14 @@
 </head>
 
 <body>
+    <script src="Js.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    // php line doesn't read js file, need wifi conn,dont chanage his place
+    function success() {
+        swal("نشكرك", "تم ارسال ملاحظتك بنجاح", "success");
+    }
+    </script>
     <!------Header------>
     <section class="header">
         <nav class="navBar">
@@ -138,7 +145,7 @@
             </div>
             <div class="imgs" id="imgs">
                 <div class="allimgs">
-                <?php 
+                    <?php 
                     $sus = 'SELECT username from useres where email = "'.$em.'"';
                     $rus = mysqli_query($conn, $sus);  
                     $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
@@ -152,73 +159,72 @@
                 </div>
             </div>
         </div>
-        
+
 
         <!---------- Footer  ---------------->
         <section class="footer">
-                    <div class="row2">
-                        <div id="contact" class="contactSection ">
+            <div class="row2">
+                <div id="contact" class="contactSection ">
 
-                            <form action="contact.php" method="post">
-                                <h3>للملاحظات والإستفسارات</h3>
-                                <?php 
+                    <form action="contact.php" method="post">
+                        <h3>للملاحظات والإستفسارات</h3>
+                        <?php 
                     if(isset($_SESSION['status'])){            
                        echo' <script>success();</script>';            
                         unset( $_SESSION['status']);
                     }
                      ?>
-                                <label for="name">
-                                    <p>الإسم:</p>
-                                </label>
-                                <input type="text" id="name" name="name"><br>
+                        <label for="name">
+                            <p>الإسم:</p>
+                        </label>
+                        <input type="text" id="name" name="name"><br>
 
-                                <label for="email">
-                                    <p>الإيميل</p>
-                                </label>
-                                <input type="email" id="email" name="email" placeholder="example@example.com"><br>
+                        <label for="email">
+                            <p>الإيميل</p>
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com"><br>
 
-                                <label for="subject">
-                                    <p>اختر الموضوع</p>
-                                </label>
-                                <select id="subject" name="subject">
-                                    <option value="NOTE">ملاحظة</option>
-                                    <option value="PROBLEM">مشكلة</option>
-                                    <option value="OTHER">آخر</option>
-                                </select>
-                                <label for="content">
-                                    <p>المحتوى</p>
-                                </label>
-                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                        <label for="subject">
+                            <p>اختر الموضوع</p>
+                        </label>
+                        <select id="subject" name="subject">
+                            <option value="NOTE">ملاحظة</option>
+                            <option value="PROBLEM">مشكلة</option>
+                            <option value="OTHER">آخر</option>
+                        </select>
+                        <label for="content">
+                            <p>المحتوى</p>
+                        </label>
+                        <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
-                                <input type="submit" name="submit" value="إرسال">
-                            </form>
-                        </div>
-                        <div id="us" class="footer-content">
-                            <h3>أفــــــــاق</h3>
-                            <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
-                                وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
+                        <input type="submit" name="submit" value="إرسال">
+                    </form>
+                </div>
+                <div id="us" class="footer-content">
+                    <h3>أفــــــــاق</h3>
+                    <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
+                        وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
 
-                            <ul class="socials">
-                                <p>تابعنا على</p>
-                                <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a>
-                                </li>
-                                <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
-                                            class="fa fa-youtube"></i></a></li>
-                            </ul>
-                            <div class="Download">
-                                <p>حمل التطبيق </p>
-                                <a href="#" onclick="info(); return false;"><img
-                                        src="Picture/App-store-desktop.png"></a>
-                                <a href="#" onclick="info(); return false;"><img
-                                        src="Picture/google-play-blanco-desktop.png"></a>
-                            </div>
-                        </div>
+                    <ul class="socials">
+                        <p>تابعنا على</p>
+                        <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
+                                    class="fa fa-youtube"></i></a></li>
+                    </ul>
+                    <div class="Download">
+                        <p>حمل التطبيق </p>
+                        <a href="#" onclick="info(); return false;"><img src="Picture/App-store-desktop.png"></a>
+                        <a href="#" onclick="info(); return false;"><img
+                                src="Picture/google-play-blanco-desktop.png"></a>
                     </div>
-                    <div class="footer-bottom">
-                        <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
-                    </div>
-                </section>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
+            </div>
+        </section>
     </div>
     <div class="insertBlog" id="insertBlog">
         <form class="newBlog" method="post" action="profile.php" enctype="multipart/form-data">
