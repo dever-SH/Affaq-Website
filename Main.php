@@ -38,7 +38,7 @@ session_start();
                 <li><a href="MainPage.php">الرئيسية</a></li>
                 </ol>
              </div>
-                <a id="loginbtn" href="#" onclick="blurr('signinDiv', 'blur')">  تسجيل الدخول </a> <!--  هنا صفحة شادن-->
+                <a id="loginbtn" href="#" onclick="blurr('signinDiv', 'blur')">تسجيل الدخول </a> <!--  هنا صفحة شادن-->
             </nav>
            <svg  class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                <path fill="#ffffff" fill-opacity="1" d="M0,192L60,202.7C120,213,240,235,360,229.3C480,224,600,192,720,192C840,192,960,224,1080,213.3C1200,203,1320,149,1380,122.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
@@ -112,7 +112,7 @@ session_start();
                     <!---------- Footer  ---------------->
     <section class="footer">
      <div class="row2">
-        <div id="contact" class="contactSection ">
+        <div id="contact" class="contactSection">
 
             <form action="contact.php" method="post">
                 <h3>للملاحظات والإستفسارات</h3>
