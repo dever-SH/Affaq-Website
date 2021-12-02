@@ -1,0 +1,272 @@
+<?php
+    session_start();$em = $_SESSION["em"];
+    $conn = new mysqli("localhost", "root", "", "afaqwebsite");
+?>
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <!-- <link href="profileStyle.css" rel="stylesheet"> -->
+    <link href="style.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <script src="Js.js"></script>
+
+    <title>حســــابي</title>
+    <link rel="icon" type="image/png" href="picture/tabIcon.svg">
+
+    <style>
+    .header {
+        min-height: 300px;
+        max-width: 100%;
+        background-image: linear-gradient(rgba(202, 227, 233, 0.5), rgba(202, 227, 233, 0.5)), url("Picture/background.jpg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .closein {
+        cursor: pointer;
+        position: absolute;
+        margin-top: -127%;
+        margin-left: 43%;
+        color: black;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <!------Header------>
+    <section class="header">
+        <nav class="navBar">
+            <a href=""><img src="Picture/logo2.svg"> </a>
+            <div class="nav-links">
+                <ol>
+                    <li><a href="profile.php">حسابي</a></li>
+                    <li><a href="#connect">تواصل معنا</a></li>
+                    <li><a href="#us">عنّا</a></li>
+                    <li><a href="MainPage.html">الرئيسية</a></li>
+                </ol>
+            </div>
+
+        </nav>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,192L60,202.7C120,213,240,235,360,229.3C480,224,600,192,720,192C840,192,960,224,1080,213.3C1200,203,1320,149,1380,122.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <div id="allPage">
+        <div class="profile" id="profile">
+            <div class="pInfo">
+                <h3>
+                    <?php 
+                    $s = "SELECT username from useres where email = '".$em."'";
+                    $r = mysqli_query($conn, $s);
+                    $r2 = mysqli_fetch_array($r, MYSQLI_ASSOC);
+                    echo'@'.$r2["username"];
+                ?>
+                </h3>
+                <p>
+                    <?php 
+                    $s = "SELECT bio from useres where email = '".$em."'";
+                    $r = mysqli_query($conn, $s);
+                    $r2 = mysqli_fetch_array($r, MYSQLI_ASSOC);
+                    print ($r2["bio"]);
+                ?>
+                </p>
+            </div>
+            <div class="infoRec">
+
+                <div class="infoNum" id="tripNum" onclick="showHide('blogs', 'imgs')">
+                    <h1 class="Num">
+                        <?php 
+                        $s = "SELECT count(btitle) from blog where emaill = '".$em."'";
+                        $r = mysqli_query($conn, $s);
+                        $r2 = mysqli_fetch_array($r, MYSQLI_ASSOC);
+                        echo $r2["count(btitle)"];
+                    ?>
+                    </h1>
+                    <h4 class="infoTitle" id="tripT">الرحلات</h4>
+                </div>
+                <div class="infoNum" id="tripNum" onclick="showHide('imgs', 'blogs')">
+                    <h4 class="infoTitle" id="imgT">الصور</h4>
+                </div>
+                <div class="insertNew">
+                    <input class="inserBlog" type="button" value="إضافة تدوينة جديدة"
+                        onclick="blurr('insertBlog', 'allPage')">
+                </div>
+            </div>
+            <div class="profileImg"></div>
+            <div class="blogs" id="blogs">
+                <?php 
+                    $s = 'SELECT * FROM blog where emaill = "'.$em.'"';
+                    $r = mysqli_query($conn, $s);
+
+                    $sus = 'SELECT username from useres where email = "'.$em.'"';
+                    $rus = mysqli_query($conn, $sus);  
+                    $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
+
+                    while($r2 = mysqli_fetch_array($r, MYSQLI_ASSOC)) { 
+                        $sid = 'SELECT bid from blog where btitle = "'.$r2["btitle"].'"';
+                        $rid = mysqli_query($conn, $sid);  
+                        $rid2 = mysqli_fetch_array($rid, MYSQLI_ASSOC);
+                        $simg = "SELECT img from imgs where id ='".$rus2["username"]."".$rid2["bid"]."'";
+                        $rimg = mysqli_query($conn, $simg);
+                        echo '
+                        <div class="blog">
+                        <details>
+                            <summary>
+                                <h2 class="blogTitle">'.$r2["btitle"].'</h2>
+                            </summary>
+                            <p class="blogBody"> <br> '.$r2["bcontent"].
+                            '<br> <br> <div class = "blogimgs">'
+                            ;
+
+                            
+                            while($rimg2 = mysqli_fetch_array($rimg, MYSQLI_ASSOC)){
+                                echo '<div style="background-image: url(\'blogsImgs/'.$rimg2["img"].'\');"></div>';
+                            }
+                            echo'
+                            </div>
+                            </p>
+                            
+                        </details>
+                        </div>';
+                    }
+                ?>
+            </div>
+            <div class="imgs" id="imgs">
+                <div class="allimgs">
+                <?php 
+                    $sus = 'SELECT username from useres where email = "'.$em.'"';
+                    $rus = mysqli_query($conn, $sus);  
+                    $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
+                    $s = "SELECT img from imgs where id LIKE '".$rus2["username"]."%'";
+                    $r = mysqli_query($conn, $s);
+                    while($rr2 = mysqli_fetch_array($r, MYSQLI_ASSOC)){
+                        echo'
+                        <div style="background-image: url(\'blogsImgs/'.$rr2["img"].'\');"></div>';
+                    }
+                ?>
+                </div>
+            </div>
+        </div>
+        
+
+        <!---------- Footer  ---------------->
+
+        <section class="footer">
+            <div class="row2">
+                <div id="connect" class="commentSection ">
+                    <form>
+                        <h3>للملاحظات والإستفسارات</h3>
+
+                        <label for="email">
+                            <p>الايميل</p>
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+
+                        <label for="Subject">
+                            <p>اختر الموضوع</p>
+                        </label>
+                        <select id="Subject" name="Subject">
+                            <option value="note">ملاحظة</option>
+                            <option value="problem">مشكلة</option>
+                            <option value="other">آخر</option>
+                        </select>
+
+                        <label for="comment">
+                            <p>المحتوى</p>
+                        </label>
+                        <textarea name="comment" rows="5" cols="32" placeholder="هنا"></textarea><br>
+
+                        <input type="submit" value="إرسال" class="footersub">
+                    </form>
+                </div>
+
+                <div id="us" class="footer-content">
+                    <h3>أفــــــــاق</h3>
+                    <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
+                        وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
+
+
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        <p>تابعنا على</p>
+                    </ul>
+                    <div class="Download">
+                        <p>حمل التطبيق </p>
+                        <a href=""><img src="Picture/App-store-desktop.png"></a>
+                        <a href=""><img src="Picture/google-play-blanco-desktop.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
+            </div>
+        </section>
+    </div>
+    <div class="insertBlog" id="insertBlog">
+        <form class="newBlog" method="post" action="profile.php" enctype="multipart/form-data">
+            <label for="blogTitle">عنوان المدونة</label>
+            <input type="text" id="blogTitle" required name="bt"> <br>
+            <input type="text" placeholder="وصف التدوينة" required id="blogDes" name="bdes"> <br><br>
+            <textarea placeholder="اكتب تدوينتك هنا" required name="bc"></textarea>
+            <input type="file" style="margin-left: 25%;" name="bimg[]" multiple><br><br>
+            <h1><a href="#" onclick="hideBlog(insertBlog, allPage);" class="closein bi bi-x"></a></h1>
+            <input type="submit" value="نشـــر" class="blogSubmit" name="share"> <input type="reset" value="مســح"
+                class="blogReset">
+        </form>
+    </div>
+
+
+
+    <?php
+        if(isset($_POST['share'])) {
+            $bt = $_POST['bt']; $bc = $_POST['bc']; $bd = $_POST['bdes'];
+            $sql = 'INSERT into blog (emaill, btitle, bcontent, bdes) values  ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'")';
+            $result = mysqli_query($conn, $sql);  
+            if($result) {
+                $sid = 'SELECT bid from blog where btitle = "'.$bt.'"';
+                $rid = mysqli_query($conn, $sid);  
+                $rid2 = mysqli_fetch_array($rid, MYSQLI_ASSOC);
+
+                $sus = 'SELECT username from useres where email = "'.$em.'"';
+                $rus = mysqli_query($conn, $sus);  
+                $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
+                
+                    foreach($_FILES['bimg']['name'] as $key=>$val){ 
+                        $fileName = basename($_FILES['bimg']['name'][$key]); 
+                        $tempname = $_FILES["bimg"]["tmp_name"];    
+                        $folder = "blogsImgs/".$fileName;
+                        if(move_uploaded_file($_FILES["bimg"]["tmp_name"][$key], $folder)) {
+                            $sq = 'INSERT into imgs (id, img) values ("'.$rus2["username"].''.$rid2["bid"].'", "'.$fileName.'")';
+                            $rsql = mysqli_query($conn, $sq);  
+                        }
+                    }
+            } 
+           // else echo 'errorrreee <br>'.($sql -> error);
+        }
+    ?>
+
+</body>
+
+</html>
