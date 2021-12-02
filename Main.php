@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
 
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -50,7 +50,7 @@
             <div class="nav-links">
                 <ol>
                     <li><a href="profile.php" target="_blank_">حسابي</a></li> <!--  هنا صفحة شادن-->
-                    <li><a href="#connect">تواصل معنا</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
                     <li><a href="#us">عنّا</a></li>
                     <li><a href="Main.php">الرئيسية</a></li>
                 </ol>
@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="midmenu-col">
                             <img class="icons" src="Picture/world.svg">
-                            <a href="">إستكشف دول العالم العربي!</a> <!--  هنا صفحة دانيا-->
+                            <a href="countriesPage.php">إستكشف دول العالم العربي!</a> <!--  هنا صفحة دانيا-->
                         </div>
                         <div class="midmenu-col">
                             <img class="icons" src="Picture/Feather.svg">
@@ -79,7 +79,7 @@
                         </div>
                         <div class="midmenu-col">
                             <img class="icons" src="Picture/mapsvg.svg">
-                            <a href=""> تجول حسب هواياتك</a> <!--  هنا صفحة ضي-->
+                            <a href="CategoryPage.php"> تجول حسب هواياتك</a> <!--  هنا صفحة ضي-->
                         </div>
                     </div>
                 </section>

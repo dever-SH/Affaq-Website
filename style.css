@@ -825,4 +825,160 @@ input[type=email], input[type=password] {
   }
 
   /****************************************************************/
-/* ******* The end of main page style ********** */
+/* ******* Country style ********** */
+
+/****** content *********/
+
+#upBtn {
+    position: fixed;
+    bottom: 20px;
+    z-index: 99;
+    border: none;
+    background: #f4f4f4;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    width: 50px; height: 50px;
+  }
+  
+  #upBtn:hover {
+    background-color: #e7cea9;
+  }
+  
+  .country-img{
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+  }
+  
+  .country_container h2{
+    font-size: 30px;
+    text-align: center;
+    color : #343C44;
+    padding: 100px;
+  }
+  
+  .country_container p{
+    margin: 0 30px 0 30px;
+    padding: 50px;
+    color: #848484;
+    font-size : 17px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* famous cities */
+  
+  .container{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding:50px;
+  }
+  
+  .container .box{
+    position: relative;
+    width: 300px;
+    height: 230px;
+    background: #F4F4F4;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: 0.5s;
+  }
+  
+  .container .box:hover {
+    height: 420px;
+    background: #b4c2b9;
+  
+  }
+  
+  .container .box .head {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width : 260px;
+    height: 260px;
+    top : -60px;
+  }
+  
+  .container .box .head img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit :cover;
+  }
+  
+  .container .box .head h3{
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  
+  .container .box p{
+    padding: 25px;
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    color : black;
+  }
+  
+  .container .box:hover p{
+    opacity: 1;
+    margin-top: -35px;
+    transition-delay: 0.5s;
+  }
+  
+  
+  
+  /***** menu ****/
+  
+  .country-menu{
+      width: 75%;
+      margin: auto;
+      text-align: center;
+  }
+  .country-row{
+      display: flex ;
+      justify-content: center;
+  }
+  .country-col{
+      border-radius:15px;
+      margin-left: 50px;
+      margin-bottom: 20%;
+      position:relative;
+      height:140px;
+      width: 150px;
+      transition: 0.5s;
+      background-color:rgba(255, 255, 255, 0.356);
+      box-shadow:0 0 15px 0 #5E7989;
+  }
+  .country-col:hover{
+      background-color: #9AAEBB;
+  }
+  
+  .country-col a{
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      padding:0 15% 15% 15%;
+      font-size: small;
+  }
+  .country-icons{
+      opacity:0.9;
+      width: 50px;
+      height: 80px;
+  }
