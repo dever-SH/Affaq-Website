@@ -1,6 +1,6 @@
 <?php
     session_start();$em = $_SESSION["em"];
-    $conn = new mysqli("localhost", "root", "", "afaqwebsite");
+    $conn = new mysqli("sql104.epizy.com", "epiz_30503805", "HTh9fu4kjdC0J", "epiz_30503805_afaq");
 ?>
 
 <!DOCTYPE html>
