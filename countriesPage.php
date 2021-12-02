@@ -54,27 +54,27 @@
 <section class="country-menu">
     <div class="country-row">
         <div class="country-col">
-          <img class="country-icons"src="Picture/السعودية.svg">
+          <img class="country-icons"src="Picture/saudi.svg">
           <a href="SaudiArabia.php" target="_blank"> السعودية
         </a>
           </div>
       <div class="country-col">
-          <img class="country-icons" src="Picture/مصر.svg">
+          <img class="country-icons" src="Picture/egypet.svg">
           <a href="egypt.php" target="_blank">
               مصر </a>
             </div>
             <div class="country-col">
-              <img class="country-icons" src="Picture/تونس.svg">
+              <img class="country-icons" src="Picture/tunisia.svg">
               <a href="tunisia.php" target="_blank">
               تونس</a>
         </div>
         <div class="country-col">
-          <img class="country-icons" src="Picture/الإمارات.svg">
+          <img class="country-icons" src="Picture/Emarat.svg">
           <a href="Emirates.php" target="_blank">
             الإمارات</a>
     </div>
     <div class="country-col">
-        <img class="country-icons" src="Picture/المغرب.svg">
+        <img class="country-icons" src="Picture/morroco.svg">
         <a href="morocco.php" target="_blank">
       المغرب</a>
 </div>

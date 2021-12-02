@@ -265,10 +265,7 @@
                         }
                     }
             } 
-           // else echo 'errorrreee <br>'.($sql -> error);
         }
     ?>
-
 </body>
-
 </html>

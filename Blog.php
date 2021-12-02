@@ -1,10 +1,5 @@
-<?php
-    $conn = new mysqli("localhost", "root", "", "afaqwebsite");
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
-      echo "Connected successfully";
-?>
+<?php $conn = new mysqli("localhost", "root", "", "afaqwebsite"); ?>
+
 <!DOCTYPE html>
 <html dir="rtl">
 
@@ -117,138 +112,68 @@
                 ?>
         </div>
     </div>
-     <!---------- Footer  ---------------->
-     <section class="footer">
-                    <div class="row2">
-                        <div id="contact" class="contactSection ">
+    <!---------- Footer  ---------------->
+    <section class="footer">
+        <div class="row2">
+            <div id="contact" class="contactSection ">
 
-                            <form action="contact.php" method="post">
-                                <h3>للملاحظات والإستفسارات</h3>
-                                <?php 
+                <form action="contact.php" method="post">
+                    <h3>للملاحظات والإستفسارات</h3>
+                    <?php 
                     if(isset($_SESSION['status'])){            
                        echo' <script>success();</script>';            
                         unset( $_SESSION['status']);
                     }
                      ?>
-                                <label for="name">
-                                    <p>الإسم:</p>
-                                </label>
-                                <input type="text" id="name" name="name"><br>
+                    <label for="name">
+                        <p>الإسم:</p>
+                    </label>
+                    <input type="text" id="name" name="name"><br>
 
-                                <label for="email">
-                                    <p>الإيميل</p>
-                                </label>
-                                <input type="email" id="email" name="email" placeholder="example@example.com"><br>
+                    <label for="email">
+                        <p>الإيميل</p>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com"><br>
 
-                                <label for="subject">
-                                    <p>اختر الموضوع</p>
-                                </label>
-                                <select id="subject" name="subject">
-                                    <option value="NOTE">ملاحظة</option>
-                                    <option value="PROBLEM">مشكلة</option>
-                                    <option value="OTHER">آخر</option>
-                                </select>
-                                <label for="content">
-                                    <p>المحتوى</p>
-                                </label>
-                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                    <label for="subject">
+                        <p>اختر الموضوع</p>
+                    </label>
+                    <select id="subject" name="subject">
+                        <option value="NOTE">ملاحظة</option>
+                        <option value="PROBLEM">مشكلة</option>
+                        <option value="OTHER">آخر</option>
+                    </select>
+                    <label for="content">
+                        <p>المحتوى</p>
+                    </label>
+                    <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
-                                <input type="submit" name="submit" value="إرسال">
-                            </form>
-                        </div>
-                        <div id="us" class="footer-content">
-                            <h3>أفــــــــاق</h3>
-                            <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
-                                وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
+                    <input type="submit" name="submit" value="إرسال">
+                </form>
+            </div>
+            <div id="us" class="footer-content">
+                <h3>أفــــــــاق</h3>
+                <p>صفحة عربية تساعدك على إكستشاف الوطن العربي
+                    وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة</p>
 
-                            <ul class="socials">
-                                <p>تابعنا على</p>
-                                <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a>
-                                </li>
-                                <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
-                                            class="fa fa-youtube"></i></a></li>
-                            </ul>
-                            <div class="Download">
-                                <p>حمل التطبيق </p>
-                                <a href="#" onclick="info(); return false;"><img
-                                        src="Picture/App-store-desktop.png"></a>
-                                <a href="#" onclick="info(); return false;"><img
-                                        src="Picture/google-play-blanco-desktop.png"></a>
-                            </div>
-                        </div>
-                        </div>
-                    <div class="footer-bottom">
-                        <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
-                    </div>
-                </section>
-    <script>
-    // for nav bar color
-    window.addEventListener('scroll', function() {
-        let header = document.querySelector('nav');
-        let windowPosition = window.scrollY > 0;
-        header.classList.toggle('scrolling-active', windowPosition);
-    })
-
-    //----------- هنا فنكشن أقرأ المزيد-----------------------
-    //----------- الصراحة هذي اضبط فنكشن جربته-----------------------
-    function readMore(city) {
-        let desc = document.querySelector(`.article[data-city="${city}"] .desc`);
-        let dots = document.querySelector(`.article[data-city="${city}"] .dots`);
-        let more = document.querySelector(`.article[data-city="${city}"] .more`);
-        let button = document.querySelector(`.article[data-city="${city}"] .myBtn`);
-        let image = document.querySelector(`.article[data-city="${city}"] .myImage`);
-        let Like = document.querySelector(`.article[data-city="${city}"] .like`);
-        let Dislike = document.querySelector(`.article[data-city="${city}"] .dislike`);
-        if (dots.style.display === "none") {
-            desc.style.display = "inline";
-            dots.style.display = "inline";
-            button.textContent = "أقرأ المزيد";
-            more.style.display = "none";
-            image.style.display = "none"; //هنا القلب يختفي لين يضغط أقرأ المزيد 
-            // Like.style.display = "none"; //هنا القلب يختفي لين يضغط أقرأ المزيد 
-            // Dislike.style.display = "none"; //هنا القلب يختفي لين يضغط أقرأ المزيد 
-        } else {
-            desc.style.display = "none";
-            dots.style.display = "none";
-            button.textContent = " أقــل";
-            more.style.display = "block";
-            image.style.display = "inline";
-            // Like.style.display = "inline";
-            // Dislike.style.display = "inline";
-        }
-    }
-    //----------- هنا فنكشن القلب-----------------------
-    function changeHeart(city) {
-        let image = document.querySelector(`.article[data-city="${city}"] .myImage`);
-        if (image.src.match("unlike")) {
-            image.src = "Picture/like.png";
-        } else {
-            image.src = "Picture/unlike.png";
-        }
-    }
-
-    //----------- هنا فنكشن اللايك-----------------------
-    function changeLike(city) {
-        let Like = document.querySelector(`.article[data-city="${city}"] .like`);
-        if (Like.src.match("fill")) {
-            Like.src = "Picture/hand-thumbs-up.svg";
-        } else {
-            Like.src = "Picture/hand-thumbs-up-fill.svg";
-        }
-    }
-
-    //----------- هنا فنكشن الديسلايك-----------------------
-    //----------- XD حاطته كذا بس عشان يزيدن الفنكشن -----------------------
-    function changeDislike(city) {
-        let Dislike = document.querySelector(`.article[data-city="${city}"] .dislike`);
-        if (Dislike.src.match("fill")) {
-            Dislike.src = "Picture/hand-thumbs-down.svg";
-        } else {
-            Dislike.src = "Picture/hand-thumbs-down-fill.svg";
-        }
-    }
-    </script>
+                <ul class="socials">
+                    <p>تابعنا على</p>
+                    <li><a href="https://twitter.com/sauditourism"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="Mailto:affaqhelpcenter@gmail.com"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/channel/UCWR3kKXx2yi7Jnr85GqxVdA/featured"><i
+                                class="fa fa-youtube"></i></a></li>
+                </ul>
+                <div class="Download">
+                    <p>حمل التطبيق </p>
+                    <a href="#" onclick="info(); return false;"><img src="Picture/App-store-desktop.png"></a>
+                    <a href="#" onclick="info(); return false;"><img src="Picture/google-play-blanco-desktop.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 .Affaq designed by <span>Anhar Shatha Shaden Dai Daniah </span></p>
+        </div>
+    </section>
 </body>
-
 </html>

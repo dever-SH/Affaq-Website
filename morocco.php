@@ -54,7 +54,7 @@
 </button>
 
 <section class="country_container">
-  <img class="country-img" src="Picture/المغرب.svg">
+  <img class="country-img" src="Picture/morroco.svg">
 
 <p>
   تقع المغرب في أقصى الجهة الشماليّة الغربيّة من القارة الأفريقية، ويحدّها من الشمال البحر الأبيض المتوسط وإسبانيا، بالإضافة إلى جبل طارق شمالاً، بينما يحدّها من الشرق والجنوب الشرقيّ دولة الجزائر، بينما يحدّها من الغرب المحيط الأطلسي،
@@ -132,15 +132,15 @@
 <section class="country-menu">
     <div class="country-row">
       <div class="country-col">
-          <img class="country-icons" src="Picture/beach.svg">
+          <img class="country-icons" src="Picture/sun-umbrella.png">
                 <a href="tripdetail.php">السياحة البحرية </a>
             </div>
         <div class="country-col">
-            <img class="country-icons" src="Picture/amusement.svg">
+            <img class="country-icons" src="Picture/amusement-park.png">
               <a href="tripdetail4.php">السياحة الترفيهية</a>
     </div>
     <div class="country-col">
-        <img class="country-icons" src="Picture/run.svg">
+        <img class="country-icons" src="Picture/swimmer.png">
        <a href="tripdetail2.php">السياحة الرياضية</a>
 </div>
     </div>

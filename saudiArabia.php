@@ -60,7 +60,7 @@
 <section class="country_container">
 
   <!--saudi-->
-<img class="country-img" src="Picture/السعودية.svg">
+<img class="country-img" src="Picture/saudi.svg">
 <p>
   المملكة العربية السعودية أكبر دول الشرق الأوسط مساحة، وتقع تحديدًا في الجنوب الغربي من قارة آسيا وتشكل الجزء الأكبر من شبه الجزيرة العربية إذ تبلغ مساحتها حوالي مليوني كيلومتر مربع.
 كان الملك عبد العزيز آل سعود أول ملك للدولة السعودية بشكلها الحديث وذلك بعد توحيد مناطقها وأقاليمها تحت مسمى المملكة العربية السعودية في 23 سبتمبر 1932م
@@ -124,23 +124,23 @@
 <section class="country-menu">
     <div class="country-row">
         <div class="country-col">
-            <img class="country-icons"src="Picture/shop.svg" >
+            <img class="country-icons"src="Picture/shopping-bag.png" >
           <a href="tripdetail3.php"> سياحة التسوق </a>
       </div>
       <div class="country-col">
-          <img class="country-icons" src="Picture/beach.svg">
+          <img class="country-icons" src="Picture/sun-umbrella.png">
                 <a href="tripdetail.php">السياحة البحرية </a>
             </div>
             <div class="country-col">
-                <img class="country-icons" src="Picture/nature.svg">
+                <img class="country-icons" src="Picture/desert.png">
                <a href="tripdetail1.php">السياحة البيئية</a>
         </div>
         <div class="country-col">
-            <img class="country-icons" src="Picture/amusement.svg">
+            <img class="country-icons" src="Picture/amusement-park.png">
               <a href="tripdetail4.php">السياحة الترفيهية</a>
     </div>
     <div class="country-col">
-        <img class="country-icons" src="Picture/run.svg">
+        <img class="country-icons" src="Picture/swimmer.png">
        <a href="tripdetail2.php">السياحة الرياضية</a>
 </div>
     </div>

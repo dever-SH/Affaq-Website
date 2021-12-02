@@ -55,7 +55,7 @@
 
 <section class="country_container">
 
-  <img class="country-img" src="Picture/مصر.svg">
+  <img class="country-img" src="Picture/egypet.svg">
 <p>
   تقع في الركن الشمالي الشرقي من قارة أفريقيا، ولديها امتداد آسيوي، حيث تقع شبه جزيرة سيناء داخل قارة آسيا فهي دولة عابرة للقارات، ولجمهورية مِصرَ العربية سواحل طويلة على البحرين الأبيض والأحمر، وتشترك بحدود مع سبعة دول، تبلغ مساحة جمهورية مصر العربية حوالي 1.002.000 كيلومتر مربع.
 
@@ -125,19 +125,19 @@
 <section class="country-menu">
     <div class="country-row">
         <div class="country-col">
-            <img class="country-icons"src="Picture/shop.svg">
+            <img class="country-icons"src="Picture/shopping-bag.png">
           <a href="tripdetail3.php"> سياحة التسوق </a>
       </div>
       <div class="country-col">
-          <img class="country-icons" src="Picture/beach.svg">
+          <img class="country-icons" src="Picture/sun-umbrella.png">
                 <a href="tripdetail.php">السياحة البحرية </a>
             </div>
             <div class="country-col">
-                <img class="country-icons" src="Picture/nature.svg">
+                <img class="country-icons" src="Picture/desert.png">
                <a href="tripdetail1.php">السياحة البيئية</a>
         </div>
     <div class="country-col">
-        <img class="country-icons" src="Picture/run.svg">
+        <img class="country-icons" src=Picture/swimmer.png">
        <a href="tripdetail2.php">السياحة الرياضية</a>
 </div>
     </div>

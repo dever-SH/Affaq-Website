@@ -54,7 +54,7 @@
 </button>
 
 <section class="country_container">
-  <img class="country-img" src="Picture/الإمارات.svg">
+  <img class="country-img" src="Picture/Emarat.svg">
 <p>
   تقع دولة الإمارات العربية المتحدة في قارة آسيا، وتأتي في المرتبة 115 من حيث مساحة الأرض، حيث تُغطي مساحة قدرها 83.600 كيلومتر مربع، وتتشارك مع المملكة العربية السعودية، وسلطنة عُمان في الحدود البرية، بينما تُمثل كلّ من إيران، وقطر، والعراق، والكويت، والبحرين الحدود البحرية لدولة الإمارات.
   الدرهم هو الوحدة الأساسية لعملة الإمارات العربية المتحدة.
@@ -128,19 +128,19 @@
 <section class="country-menu">
     <div class="country-row">
         <div class="country-col">
-            <img class="country-icons"src="Picture/shop.svg">
+            <img class="country-icons"src="Picture/shopping-bag.png">
           <a href="tripdetail3.php"> سياحة التسوق </a>
       </div>
             <div class="country-col">
-                <img class="country-icons" src="Picture/nature.svg">
+                <img class="country-icons" src="Picture/desert.png">
                <a href="tripdetail1.php">السياحة البيئية</a>
         </div>
         <div class="country-col">
-            <img class="country-icons" src="Picture/amusement.svg">
+            <img class="country-icons" src="Picture/amusement-park.png">
               <a href="tripdetail4.php">السياحة الترفيهية</a>
     </div>
     <div class="country-col">
-        <img class="country-icons" src="Picture/run.svg">
+        <img class="country-icons" src="Picture/swimmer.png">
        <a href="tripdetail2.php">السياحة الرياضية</a>
 </div>
     </div>

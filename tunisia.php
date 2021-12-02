@@ -55,7 +55,7 @@
 
 <section class="country_container">
 
-  <img class="country-img" src="Picture/تونس.svg">
+  <img class="country-img" src="Picture/tunisia.svg">
 <p>
   تونس دولة في أقصى شمال أفريقيا. وهي جزء من منطقة المغرب العربي، وتحدها الجزائر من الغرب والجنوب الغربي، ليبيا من الجنوب الشرقي والبحر الأبيض المتوسط من الشمال والشرق، تبلغ مساحتها 163,610 كم مربع،
     الدينار التونسي هو العملة الرسمية للجمهورية التونسية .
@@ -123,19 +123,19 @@
 <section class="country-menu">
     <div class="country-row">
         <div class="country-col">
-            <img class="country-icons"src="Picture/shop.svg">
+            <img class="country-icons"src="Picture/shopping-bag.png">
           <a href="tripdetail3.php"> سياحة التسوق </a>
       </div>
       <div class="country-col">
-          <img class="country-icons" src="Picture/beach.svg">
+          <img class="country-icons" src="Picture/sun-umbrella.png">
                 <a href="tripdetail.php">السياحة البحرية </a>
             </div>
             <div class="country-col">
-                <img class="country-icons" src="Picture/nature.svg">
+                <img class="country-icons" src="Picture/desert.png">
                <a href="tripdetail1.php">السياحة البيئية</a>
         </div>
         <div class="country-col">
-            <img class="country-icons" src="Picture/amusement.svg">
+            <img class="country-icons" src="Picture/amusement-park.png">
               <a href="tripdetail4.php">السياحة الترفيهية</a>
     </div>
     </div>
