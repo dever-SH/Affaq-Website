@@ -35,6 +35,9 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     background-size: cover;
     position: relative;
 }
+#Mheader{
+    min-height: 100vh;
+}
 .wave{
     position: absolute;
     bottom: 0;
@@ -366,13 +369,63 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     background-color: #9DB0A3;
 }
 .contactSection input[type="email"],.contactSection input[type="text"],
-select, .content{
+select#subject, textarea#TT{
     border-radius: 5px;
+    width: 200px;
 }
 .contactSection select,.content{
     width: 100%;
     text-align: right;
 }
+
+@media (max-width: 584px){
+    #Mheader{
+        min-height: 300px;
+    }
+    .midmenu{
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .row{
+        display:block ;
+    }
+    .midmenu-col{
+        margin-bottom: 20%;
+        margin-right: 35%;
+        margin-top: -15%;
+    }
+    .map{
+        background: #fff;
+        padding: 30px;
+        margin-bottom:0;
+        display:inline-block;
+        min-height: 10vh;
+        width: 85%;
+    } 
+    .textbox{
+        position: relative ;
+        width: 200px;
+        height: 200px;
+        margin-right: 30%;
+        margin-top: -20%;
+        text-align:center;
+    }     
+    .mapdiv{
+        width: 400px; 
+        margin-right: 5%;
+    }
+    .contactSection input[type="email"],.contactSection input[type="text"],
+select#subject, textarea#TT,.footer-content , .contactSection{
+        display: block;
+         float: none;
+         width: 70%;
+    }
+}
+
+
+
 /* ********End of mainPage style********** */
 /* sign form format */
 
@@ -910,7 +963,8 @@ input[type=email], input[type=password] {
     margin-bottom: 30px;
     font-size: 20px;
   }
-  
+      
+  }
   .container .box p{
     padding: 25px;
     position: relative;
