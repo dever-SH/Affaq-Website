@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="Picture/tabIcon.svg">
     <title>أفـــــاق</title>
 
-    <title>Affaq Website</title>
     <!-- style links -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

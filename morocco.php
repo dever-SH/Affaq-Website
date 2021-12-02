@@ -132,15 +132,15 @@
 <section class="country-menu">
     <div class="country-row">
       <div class="country-col">
-          <img class="country-icons" src="Picture/beach.svg">
+          <img class="country-icons" src="Picture/sun-umbrella.png">
                 <a href="tripdetail.php">السياحة البحرية </a>
             </div>
         <div class="country-col">
-            <img class="country-icons" src="Picture/amusement.svg">
+            <img class="country-icons" src="Picture/amusement-park.png">
               <a href="tripdetail4.php">السياحة الترفيهية</a>
     </div>
     <div class="country-col">
-        <img class="country-icons" src="Picture/run.svg">
+        <img class="country-icons" src="Picture/swimmer.png">
        <a href="tripdetail2.php">السياحة الرياضية</a>
 </div>
     </div>
