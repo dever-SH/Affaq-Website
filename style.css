@@ -369,16 +369,17 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     background-color: #9DB0A3;
 }
 .contactSection input[type="email"],.contactSection input[type="text"],
-select#subject, textarea#TT{
+select#subject,.content{
     border-radius: 5px;
+    background-color: #f7f5f2;
     width: 200px;
 }
 .contactSection select,.content{
-    width: 100%;
+    width: 200px;
     text-align: right;
 }
 
-@media (max-width: 584px){
+@media (max-width: 900px){
     #Mheader{
         min-height: 300px;
     }

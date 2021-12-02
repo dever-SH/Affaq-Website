@@ -52,22 +52,18 @@
                                                              // in live server case 
 
 // if(isset($_POST['submit']) && $_POST['email'] != NULL)
-// {
+// { 
+//         $name =$_POST['name'] ;
 //         $email =$_POST['email'] ;
 //         $subject = $_POST['subject'];
 //         $content = $_POST['content'];
         
 //         $to ='Affaqhelpcenter@gmail.com';
 
-//         $text = 'الايميل : '.$email.'\r\n المحتوى:'.$content;
-
-//         require_once "PHPMailer\PHPMailerr.php";
-//         require_once "PHPMailer\SMTP.php";
-//         require_once "PHPMailer\Exception.php";
-        
-//         $mail = new PHPMailer();
+//         $text ="الإسم  :".$name."<br>"."عنوان الإيميل  :".$email."<br>"."المحتوى  :".$content;
 
 //         mail($to,$subject,$text);
+
 //         $_SESSION['status'] = "done";
 //         header('Location: Main.php');  
 //         }

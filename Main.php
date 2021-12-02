@@ -155,7 +155,7 @@
                                 <label for="email">
                                     <p>الإيميل</p>
                                 </label>
-                                <input type="email" id="email" name="email" placeholder="example@example.com"><br>
+                                <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
 
                                 <label for="subject">
                                     <p>اختر الموضوع</p>
@@ -168,7 +168,7 @@
                                 <label for="content">
                                     <p>المحتوى</p>
                                 </label>
-                                <textarea id="TT" class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                                 <input type="submit" name="submit" value="إرسال">
                             </form>
