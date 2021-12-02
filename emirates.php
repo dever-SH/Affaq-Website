@@ -123,25 +123,25 @@
 </div>
 
 
-<h2>تجول حسب هوايتك !</h2>
+<h2>تجول حسب ماتفضل !</h2>
 
 <section class="country-menu">
     <div class="country-row">
         <div class="country-col">
             <img class="country-icons"src="Picture/shop.svg">
-          <a href=""> سياحة التسوق </a>
+          <a href="tripdetail3.php"> سياحة التسوق </a>
       </div>
             <div class="country-col">
                 <img class="country-icons" src="Picture/nature.svg">
-               <a href="">السياحة البيئية</a>
+               <a href="tripdetail1.php">السياحة البيئية</a>
         </div>
         <div class="country-col">
             <img class="country-icons" src="Picture/amusement.svg">
-              <a href="">السياحة الترفيهية</a>
+              <a href="tripdetail4.php">السياحة الترفيهية</a>
     </div>
     <div class="country-col">
         <img class="country-icons" src="Picture/run.svg">
-       <a href="">السياحة الرياضية</a>
+       <a href="tripdetail2.php">السياحة الرياضية</a>
 </div>
     </div>
  </section>

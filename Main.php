@@ -71,15 +71,15 @@
                     <div class="row">
                         <div class="midmenu-col">
                             <img class="icons" src="Picture/world.svg">
-                            <a href="countriesPage.php">إستكشف دول العالم العربي!</a> <!--  هنا صفحة دانيا-->
+                            <a href="countriesPage.php">إستكشف دول العالم العربي!</a>
                         </div>
                         <div class="midmenu-col">
                             <img class="icons" src="Picture/Feather.svg">
-                            <a href="Blog.php" target="_blank_">أخبرنا عن رحلتك</a> <!--  هنا صفحة شذى-->
+                            <a href="Blog.php" target="_blank_">أخبرنا عن رحلتك</a>
                         </div>
                         <div class="midmenu-col">
                             <img class="icons" src="Picture/mapsvg.svg">
-                            <a href="CategoryPage.php"> تجول حسب هواياتك</a> <!--  هنا صفحة ضي-->
+                            <a href="CategoryPage.php"> تجول حسب تفضيلاتك</a>
                         </div>
                     </div>
                 </section>
