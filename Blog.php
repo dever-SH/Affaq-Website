@@ -183,15 +183,7 @@
                     </div>
                 </section>
     <script>
-    // for nav bar color
-    window.addEventListener('scroll', function() {
-        let header = document.querySelector('nav');
-        let windowPosition = window.scrollY > 0;
-        header.classList.toggle('scrolling-active', windowPosition);
-    })
-
-    //----------- هنا فنكشن أقرأ المزيد-----------------------
-    //----------- الصراحة هذي اضبط فنكشن جربته-----------------------
+/*Read more function*/
     function readMore(city) {
         let desc = document.querySelector(`.article[data-city="${city}"] .desc`);
         let dots = document.querySelector(`.article[data-city="${city}"] .dots`);
@@ -206,46 +198,21 @@
             button.textContent = "أقرأ المزيد";
             more.style.display = "none";
             image.style.display = "none"; //هنا القلب يختفي لين يضغط أقرأ المزيد 
-            // Like.style.display = "none"; //هنا القلب يختفي لين يضغط أقرأ المزيد 
-            // Dislike.style.display = "none"; //هنا القلب يختفي لين يضغط أقرأ المزيد 
         } else {
             desc.style.display = "none";
             dots.style.display = "none";
             button.textContent = " أقــل";
             more.style.display = "block";
             image.style.display = "inline";
-            // Like.style.display = "inline";
-            // Dislike.style.display = "inline";
         }
     }
-    //----------- هنا فنكشن القلب-----------------------
+    //----------- Like function-----------------------
     function changeHeart(city) {
         let image = document.querySelector(`.article[data-city="${city}"] .myImage`);
         if (image.src.match("unlike")) {
             image.src = "Picture/like.png";
         } else {
             image.src = "Picture/unlike.png";
-        }
-    }
-
-    //----------- هنا فنكشن اللايك-----------------------
-    function changeLike(city) {
-        let Like = document.querySelector(`.article[data-city="${city}"] .like`);
-        if (Like.src.match("fill")) {
-            Like.src = "Picture/hand-thumbs-up.svg";
-        } else {
-            Like.src = "Picture/hand-thumbs-up-fill.svg";
-        }
-    }
-
-    //----------- هنا فنكشن الديسلايك-----------------------
-    //----------- XD حاطته كذا بس عشان يزيدن الفنكشن -----------------------
-    function changeDislike(city) {
-        let Dislike = document.querySelector(`.article[data-city="${city}"] .dislike`);
-        if (Dislike.src.match("fill")) {
-            Dislike.src = "Picture/hand-thumbs-down.svg";
-        } else {
-            Dislike.src = "Picture/hand-thumbs-down-fill.svg";
         }
     }
     </script>
