@@ -1,12 +1,15 @@
-# Affaq | أفــاق
-صفحة عربية تساعدك على إكتشاف الوطن العربي وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة
+<p align="center"> <img src="https://user-images.githubusercontent.com/73385631/144685033-cead65ee-b710-41f8-89d3-95274dd3841c.png" width="60%"> </p>
 
+# Affaq | أفــاق
+<p align="center"> صفحة عربية تساعدك على إكتشاف الوطن العربي وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة </p>
+
+## <p align="center"> Explore our site from here: http://affaq.great-site.net/Main.php </p>
 
 ## Members | الأعضاء
 
 Anhar yousef Aldosary | 411201886
 
-391201721 | دانية محمد العبيسي
+<p align="left"> 391201721 | دانية محمد العبيسي </p>
 
 Dai Alharbi | 392206362
 
@@ -66,5 +69,6 @@ The blog page is a blog where the traveler writes the details of the trip and ad
 if you want try websit on local host, make sure to edit $conn variable in all pages 
 and create database as attach query in (DBQuery.text) file.
 
-###### Thank you, Have a nice Travel :)
+###### Thank you, Have a nice Travel :) 
+<p align="right"> <img src="https://user-images.githubusercontent.com/73385631/144685033-cead65ee-b710-41f8-89d3-95274dd3841c.png" width="20%"> </p>
 
