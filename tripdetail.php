@@ -54,7 +54,7 @@
     <div class="box-container">
         <div class="box">
             <img src="Picture/IMG_8247.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i>تونس جزيرة جربة </h3>
                 <p>تقع جربة في شرق البلاد على خليج قابس و هي أكبر جزيرة على سواحل شمال افريقيا يسودها مناخ البحر المتوسط و يكون الطقس فيها مشمسا أغلب أيام السنة ،الكثير من المنتجعات تلبي احتياجات السياح ، لكن جربة توفر أيضًا معالم جذب أخرى ، مثل القرى الخالدة والمناظر الطبيعية المليئة بالألوان للذين يهتمون بالتعمق في الثقافة و الطبيعة 
                  افضل المنتجعات في جربة</p>
@@ -64,7 +64,7 @@
         </div>
         <div class="box">
          <img src="Picture/IMG_9674.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i>السعودية جزر نيوم </h3>
              <p>من جزيرة سندالة، يمكنك التنقل واستكشاف العديد من الجزر القريبة المتناثرة في مياه البحر الأحمر الرائعة. ألقِ المرساة في جزيرة يبوع أو شوشة واستمتع بأعظم تجربة غوص في حياتك، أو تجول في جزر صنافير وتيران وتأمل جمالهما الأخاذ.</p>
              <div class="price"> <span> SAR 157 </span> SAR 441 </div>
@@ -73,7 +73,7 @@
      </div>
      <div class="box">
          <img src="Picture/IMG_9683.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i>المغرب طنجة</h3>
              <p>طنجة مدينة فريدة من نوعها، فهي تتوفر على موقع استراتيجي يطل على واجهتي المحيط الأطلسي والبحر الأبيض المتوسط، حيث توفر لك المدينة شواطئ خلابة و مناظر لا يمكن أن تنساها طوال حياتك</p>
              <div class="price"> <span> SAR 85 </span> SAR 682 </div>
@@ -82,7 +82,7 @@
      </div>
      <div class="box">
          <img src="Picture/IMG_9682.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i>مصر شرم الشيخ</h3>
              <p>مدينة ساحلية تطل على البحر الأحمر الذي يمتلك شواطئ برّاقة بمياهه الفيروزية ورماله العلاجية، فتقدم شرم الشيخ السياحة الترفيهية داخل مجموعة كبيرة من الشواطئ أبرزها شاطئ الفنار، وشاطئ دهب.</p>
              <div class="price"> <span> SAR 270 </span> SAR 6,415 </div>
@@ -126,7 +126,7 @@
                                 <label for="content">
                                     <p>المحتوى</p>
                                 </label>
-                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                                <textarea class="contentD" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                                 <input type="submit" name="submit" value="إرسال">
                             </form>
