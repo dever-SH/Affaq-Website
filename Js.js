@@ -67,6 +67,8 @@ function topFunction() {
 }
 
 /*Read more function*/
+//This function take it from 'with some edits'
+//https://stackoverflow.com/questions/66040167/read-more-read-less-button-when-clicking-on-read-less-it-loses-its-position
 function readMore(city) {
   let desc = document.querySelector(`.article[data-city="${city}"] .desc`);
   let dots = document.querySelector(`.article[data-city="${city}"] .dots`);
