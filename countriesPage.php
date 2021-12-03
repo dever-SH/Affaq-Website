@@ -59,7 +59,7 @@
         </a>
           </div>
       <div class="country-col">
-          <img class="country-icons" src="Picture/egypet.svg">
+          <img class="country-icons" src="Picture/Egypet.svg">
           <a href="egypt.php" target="_blank">
               مصر </a>
             </div>
