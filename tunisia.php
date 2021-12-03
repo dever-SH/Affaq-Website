@@ -177,7 +177,7 @@
                 <label for="content">
                     <p>المحتوى</p>
                 </label>
-                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                <textarea class="contentD" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                 <input type="submit" name="submit" value="إرسال">
             </form>

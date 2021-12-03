@@ -54,7 +54,7 @@
     <div class="box-container">
         <div class="box">
             <img src="Picture/IMG_9778.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i> الامارات دبي</h3>
                 <p> استمتع بتجربة شيّقة في حلبة "دبي أوتودروم" لرياضات السيارات والسباقات و"الكارتينغ" مع مضمار بطول 5.39 كلم معتمد من قبل الاتحاد الدولي للسيارات يستضيف جميع فعاليات رياضة السيارات المحلية والعالمية.</p>
                 <div class="price"> <span> SAR 682 </span> SAR 1,194 </div>
@@ -63,7 +63,7 @@
         </div>
         <div class="box">
             <img src="Picture/IMG_9808.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i> السعودية الرياض </h3>
                 <p> من أهم الثروات السياحية الطبيعية التي أنعم الله بها على المملكة هي الجبال ذات الارتفاعات المختلفة والغنية بالتركيبات الصخرية الجميلة التي تجعلها المكان المناسب لممارسة الرياضات والهوايات الجبلية كتسلق الجبال وقيادة الدراجات الهوائية على الجبال بالإضافة إلى الطيران الشراعي من أعالي قمم الجبال </p>
                 <div class="price"> <span> SAR 720 </span> SAR 6,140 </div>
@@ -72,7 +72,7 @@
         </div>
         <div class="box">
             <img src="Picture/IMG_9809.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i>المغرب عرق الشبي </h3>
                 <p> في الصحراء الكبرى يمكنك ركوب عربات الكثبان الرملية او الدراجات الترابية عبر المناطق الداخلية الوعرة بالمغرب كما ان 
                     كثبان عرق شبي الرملية تقدم مناظر خلابه جعلتها تصنف كأجمل كثبان رملية في العالم وتكسبها شهرة لدى محبي التزلج على الرمال
@@ -83,7 +83,7 @@
         </div>
      <div class="box">
          <img src="Picture/IMG_9807.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i> مصر الجونة</h3>
              <p> يمتاز البحر الأحمر بمياهه الصافية وشعابه المرجانية الملونة وأسماكه النادرة وجباله المتباينة الممتدة في سلسلة طويلة بمحاذاة البحر ,كما تتمتع سواحل خليج العقبة بتسهيلات كبيرة لممارسة رياضات الغوص والغطس وغيرها من الرياضات البحرية</p>
              <div class="price"> <span> SAR 223 </span> SAR 1,337 </div>
@@ -126,7 +126,7 @@
                                 <label for="content">
                                     <p>المحتوى</p>
                                 </label>
-                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                                <textarea class="contentD" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                                 <input type="submit" name="submit" value="إرسال">
                             </form>

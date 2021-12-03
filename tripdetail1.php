@@ -53,7 +53,7 @@
     <div class="box-container">
         <div class="box">
             <img src="Picture/IMG_9737.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i>مصر محمية ابو جالوم </h3>
                 <p> محمية أبو جالوم توجد بمحافظة جنوب سيناء، وتمتلك تلك المحمية أنواع من النباتات النادرة، والعديد من أنواع الطيور البرية والحيوانات، بالإضافة إلى الكائنات البحرية المختلفة والشعاب المرجانية، كما أنها تضم مجموعة من الجبال والأودية</p>
            <div class="price"> <span> SAR 203 </span> SAR 638 </div>
@@ -62,7 +62,7 @@
         </div>
         <div class="box">
          <img src="Picture/IMG_9936.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i>السعودية محميّة عروق بني معارض</h3>
              <p> محمية طبيعية تقع في جنوب المملكة العربية السعودية على الطرف الغربي من صحراء الربع الخالي، أكبر صحراء رملية في العالم في منطقة نجران وتضم المحمية عدداً من التشكيلات الأرضية والمواطن الفطرية الطبيعية الهامة منها الكثبان الرملية المرتفعة وهضبة جيرية متقطعة،وتنقسم المحمية إلى ثلاثة مناطق؛ المنطقة الرئيسية للمحمية والمنطقة التي يُسمح فيها بالرعي الخاضع للرقابة ومنطقة الصيد</p>
         <div class="price"> <span> SAR 200 </span> SAR 1,132 </div>
@@ -71,7 +71,7 @@
      </div>
      <div class="box">
          <img src="Picture/IMG_9739.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i>الامارات محمية المها العربي الطبيعية</h3>
              <p>بإمكانك الآن مشاهدة حيوان المها العربي بأعداد كبيرة في المحمية الطبيعية المخصَّصة في أبوظبي، استكشف الحيوانات الموجودة بين الكثبان الرملية في الصحراء، وسيدهشك التنوع الوافر للحيوانات المختلفة مثل الغزلان والثعالب وفئران الصحراء والأرانب البرية والزواحف والطيور</p>
         <div class="price"> <span> SAR 230 </span> SAR 1,481 </div>
@@ -80,7 +80,7 @@
      </div>
      <div class="box">
          <img src="Picture/IMG_9741.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i> تونس محمية اشكل</h3>
              <p> تعتبر محمية" اشكل"، الواقعة في ولاية بنزرت، شمال البلاد، إحدى أجمل المحميات الطبيعية لما تتوفر عليه من ثروات مائية ونباتية
               و  يتنوع الغطاء النباتي بأنواع من الزهور والنباتات بدءا بأشجار الخروب وزهور المريم، مرورا بالسحلبيات البديعة  </p>
@@ -124,7 +124,7 @@
                                 <label for="content">
                                     <p>المحتوى</p>
                                 </label>
-                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                                <textarea class="contentD" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                                 <input type="submit" name="submit" value="إرسال">
                             </form>

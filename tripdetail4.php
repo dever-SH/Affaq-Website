@@ -55,7 +55,7 @@
     <div class="box-container">
         <div class="box">
             <img src="Picture/IMG_9729.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i>الامارات عجمان</h3>
                 <p>عجمان من اهم مدن الامارات فموقعها على الساحل الغربي جعل منها واحدة من وجهات السياحة في الامارات العربية المتحدة كما أنها تضم العديد من الاماكن السياحية البارزة التي تلبي شغف سياح المدينة في استكشاف ثقافتها والتمتع بجمال معالمها</p>
                 <div class="price"> <span> SAR 165 </span> SAR 2,765 </div>
@@ -64,7 +64,7 @@
         </div>
         <div class="box">
             <img src="Picture/IMG_9730.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i>السعودية الظهران </h3>
                 <p> تعتبر مدينة الظهران واحدة من أهم مدن السياحية في السعودية لما تتضمنه من اماكن ترفيهية رائعة مثل مركز الملك عبدالعزيز الثقافي العالمي ومعرض الطاقة وشاطىء نصف القمر </p>
                 <div class="price"> <span> SAR 242 </span> SAR 1,587 </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="box">
             <img src="Picture/IMG_9727.png" alt="" >
-            <div class="content">
+            <div class="contentD">
                 <h3><i class="fas fa-map-marker-alt"></i>المغرب الدار البيضاء </h3>
                 <p>الدار البيضاء أو كازابلانكا اكبر مدن المغرب وأجمل مدن الساحل المغربي المطلة على المحيط، والعاصمة الاقتصادية للبلاد.
  
@@ -84,7 +84,7 @@
         </div>
         <div class="box">
          <img src="Picture/IMG_9728.png" alt="" >
-         <div class="content">
+         <div class="contentD">
              <h3><i class="fas fa-map-marker-alt"></i>تونس العاصمة تونس </h3>
              <p>تونس العاصمة هي احدى اهم وجهات السياحة في تونس فهي مدينة تمتلك كل مقومات الجذب للسياح من معالم اثرية وتاريخية واماكن ترفيهية من منتزهات وغيرها كما انها تشتهر بأسواقها الشعبية التي لا يمل السيّاح من التجوّل فيها</p>
              <div class="price"> <span> SAR 314 </span> SAR 1,084 </div>
@@ -127,7 +127,7 @@
                                 <label for="content">
                                     <p>المحتوى</p>
                                 </label>
-                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                                <textarea class="contentD" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                                 <input type="submit" name="submit" value="إرسال">
                             </form>

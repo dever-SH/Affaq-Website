@@ -53,7 +53,7 @@
             <div class="box-container">
                 <div class="box">
                     <img src="Picture/IMG_9732.png" alt="" >
-                    <div class="content">
+                    <div class="contentD">
                         <h3><i class="fas fa-map-marker-alt"></i> الامارات دبي </h3>
                         <p> يعتبر مهرجان دبي للتسوق السنوي واحد من أكبر الفعاليات الإجتماعية العالمية أفضل أماكن التسوق في دبي، حيث يقصده العديد من الزوار من كافة أنحاء العالم للتمتع بتجربة تسوق فريدة من نوعها.
                      </p>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="box">
                  <img src="Picture/IMG_9733.png" alt="" >
-                 <div class="content">
+                 <div class="contentD">
                      <h3><i class="fas fa-map-marker-alt"></i> السعودية الرياض </h3>
                      <p>يتميز مهرجان مدينة الرياض للتسوق والترفيه الذي يقام من صيف كل عام، بأنه يجمع بين السياحية الثقافية والترفيهية والتسويقية،
                           ويشكل حدثاً وطنياً يسعى إلى الرقي بالسياحة الداخلية من خلال فعاليات المهرجان المتنوعة</p>
@@ -73,7 +73,7 @@
              </div>
              <div class="box">
                  <img src="Picture/IMG_9734.png" alt="" >
-                 <div class="content">
+                 <div class="contentD">
                      <h3><i class="fas fa-map-marker-alt"></i>مصر خان الخليلي</h3>
                      <p>يعود تاريخ هذا السوق في المناطق الداخلية لمدينة القاهرة القديمة إلى قرون، ويمكنك التجول في هذا السوق لتجربة صخب هذه المدينة العربية الرائعة، حتى لو لم تكن من عشاق التسوق
                          ولربما يُعَد خان الخليلي هو أفضل مكان في مصر بأكملها لشراء قمصان جديدة، وزجاجات صغيرة من الرمال الملونة عليها صور للإبل، بالإضافة إلى الهدايا التذكارية الرائعة التي تحمل اسمك بالهيروغليفية
@@ -84,7 +84,7 @@
              </div>
              <div class="box">
                  <img src="Picture/IMG_9735.png" alt="" >
-                 <div class="content">
+                 <div class="contentD">
                      <h3><i class="fas fa-map-marker-alt"></i>تونس سوق البركة</h3>
                      <p>واحد من أقدم الأسواق الذي يستقطب مُحبي السياحة في تونس العاصمة حتى يتسنى لهم شراء المجوهرات الثمينة كالإكسسوارات والأحجار الكريمة بأشكالها وأحجامها المختلفة
                          كما يتميز سوق البركة بانتشار العديد من المقاهي والمطاعم التي تعمل على تقديم خدماتها الرائعة بإسلوب راقي للزائرين</p>
@@ -128,7 +128,7 @@
                                 <label for="content">
                                     <p>المحتوى</p>
                                 </label>
-                                <textarea class="content" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
+                                <textarea class="contentD" name="content" rows="3" cols="32" placeholder="هنا"></textarea><br>
 
                                 <input type="submit" name="submit" value="إرسال">
                             </form>

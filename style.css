@@ -1054,30 +1054,30 @@ input[type=email], input[type=password] {
       width: 100%;
       object-fit: cover;
   }
-  .packages .box-container .box .content{
+  .packages .box-container .box .contentD{
       padding: 20px;
   }
-  .packages .box-container .box .content h3{
+  .packages .box-container .box .contentD h3{
      font-size: 25px;
      color: #333;    
   }
-   .packages .box-container .box .content p{
+   .packages .box-container .box .contentD p{
       font-size: 20px;
       color: #666;    
       padding: 16px 0;
    }
-   .packages .box-container .box .content .price{
+   .packages .box-container .box .contentD .price{
       font-size: 19px;
       color: #333;   
       padding-top: 16px; 
       margin-bottom:5px ; 
       direction: rtl;
    }
-   .packages .box-container .box .content .price span{
+   .packages .box-container .box .contentD .price span{
        color: #666;
        font-size: 15px;
    }
-   .packages .box-container .box .content a{
+   .packages .box-container .box .contentD a{
       color:black;
       text-decoration: none;
        height: 100%;
@@ -1091,7 +1091,7 @@ input[type=email], input[type=password] {
        padding: 5px;
        background: linear-gradient(135deg,#b1bdb4,#68786e);
    }
-   .packages .box-container .box .content a:hover{
+   .packages .box-container .box .contentD a:hover{
       color:black;
       text-decoration: none;
       background:linear-gradient(-135deg,#b1bdb4,#68786e) ; 
@@ -1154,19 +1154,19 @@ text-align: center;
           margin-bottom: 15px;
           width: 100%;
       }
-      .packages .box-container .box .content h3{
+      .packages .box-container .box .contentD h3{
           font-size: 20px;
       }
-      .packages .box-container .box .content p{
+      .packages .box-container .box .contentD p{
           font-size: 15px;
       }
-      .packages .box-container .box .content .price {
+      .packages .box-container .box .contentD .price {
           font-size: 15px;  
       }
-      .packages .box-container .box .content .price span{
+      .packages .box-container .box .contentD .price span{
           font-size: 10px;
       }
-      .packages .box-container .box .content a{
+      .packages .box-container .box .contentD a{
           font-size: 13px; 
       }
       .category-nav ul li{
