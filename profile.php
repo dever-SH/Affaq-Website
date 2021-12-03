@@ -247,7 +247,7 @@
         if(isset($_POST['share'])) {
             $bt = $_POST['bt']; $bc = $_POST['bc']; $bd = $_POST['bdes'];
             $insertQ = 'INSERT into blogs (email, title, content, descr) values  ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'")';
-            $insertC = mysqli_query($conn, $sql);  
+            $insertC = mysqli_query($conn, $insertQ);  
             if($insertC) {
                 $idQ = 'SELECT id from blogs where title = "'.$bt.'"';
                 $idC = mysqli_query($conn, $idQ);  
