@@ -4,6 +4,8 @@ window.addEventListener('scroll', function () {
   header.classList.toggle('scrolling-active', windowPosition);
 })
 
+// this function take it from 
+//(https://www.javascripttutorial.net/javascript-dom/javascript-toggle-password-visibility/) 'with some edits'
 function showHidePass(eyeID, inputID) {
   const eye = document.getElementById(eyeID);
   const password = document.getElementById(inputID);
@@ -87,6 +89,7 @@ function readMore(city) {
     image.style.display = "inline";
   }
 }
+
 //----------- Like function-----------------------
 function changeHeart(city) {
   let image = document.querySelector(`.article[data-city="${city}"] .myImage`);
