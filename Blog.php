@@ -76,32 +76,34 @@
         <div class="center-columnsh">
 
             <?php if($conn) {
-                $sb = 'SELECT * FROM blogs';
-                $rb = mysqli_query($conn, $sb);
+                $blogsQ = 'SELECT * FROM blogs';
+                $blogsC = mysqli_query($conn, $blogsQ);
 
-                while($rb2 = mysqli_fetch_array($rb, MYSQLI_ASSOC)) { 
-                    $sus = 'SELECT username from users where email = "'.$rb2["emaill"].'"';
-                    $rus = mysqli_query($conn, $sus);  
-                    $rus2 = mysqli_fetch_array($rus, MYSQLI_ASSOC);
+                while($blogsR = mysqli_fetch_array($blogsC, MYSQLI_ASSOC)) { 
+                    $usernameQ = 'SELECT username from users where email = "'.$blogsR["email"].'"';
+                    $usernameC = mysqli_query($conn, $usernameQ);  
+                    $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
 
-                    $sid = 'SELECT bid from blogs where btitle = "'.$rb2["btitle"].'"';
-                    $rid = mysqli_query($conn, $sid);  
-                    $rid2 = mysqli_fetch_array($rid, MYSQLI_ASSOC);
-                    $simg = "SELECT img from imgs where id ='".$rus2["username"]."".$rid2["bid"]."'";
-                    $rimg = mysqli_query($conn, $simg);
+                    $idQ = 'SELECT id from blogs where title = "'.$blogsR["title"].'"';
+                    $idC = mysqli_query($conn, $idQ);  
+                    $idR = mysqli_fetch_array($idC, MYSQLI_ASSOC);
+
+                    $imgQ = "SELECT img from imgs where id ='".$usernameR["username"]."".$idR["id"]."'";
+                    $imgC = mysqli_query($conn, $imgQ);
+
                     echo '
-                        <div> <article class="article" data-city="i'.$rb2["bid"].'" id="i'.$rb2["bid"].'">
-                        <h2>'.$rb2["btitle"].'</h2>
-                        <h5>كُتبَ بواسطة: '.$rus2["username"].'@</h5>
-                        <p class="desc" style="display: inline;">'.$rb2["bdes"].'</p>
+                        <div> <article class="article" data-city="i'.$idR["id"].'" id="i'.$idR["id"].'">
+                        <h2>'.$blogsR["title"].'</h2>
+                        <h5>كُتبَ بواسطة: '.$usernameR["username"].'@</h5>
+                        <p class="desc" style="display: inline;">'.$blogsR["descr"].'</p>
                         <div class="dots" style="display: inline;">...</div>
-                        <div class="more" style="display: none;">'.$rb2["bcontent"].'<br><br>
+                        <div class="more" style="display: none;">'.$blogsR["content"].'<br><br>
                     ';
-                    while($rimg23 = mysqli_fetch_array($rimg, MYSQLI_ASSOC)) 
-                        echo '<img src="../blogsImgs/'.$rimg23["img"].'">';
+                    while($imgR = mysqli_fetch_array($imgC, MYSQLI_ASSOC)) 
+                        echo '<img src="../blogsImgs/'.$imgR["img"].'">';
                     echo ' </div>
-                    <button onclick="readMore(\'i'.$rb2["bid"].'\')" class="myBtn"> أقرأ المزيد </button> 
-                    <img class="myImage" onclick="changeHeart(\'i'.$rb2["bid"].'\')" src="Picture/unlike.png">
+                    <button onclick="readMore(\'i'.$idR["id"].'\')" class="myBtn"> أقرأ المزيد </button> 
+                    <img class="myImage" onclick="changeHeart(\'i'.$idR["bid"].'\')" src="Picture/unlike.png">
                    
                         </article> </div>'
                     ;

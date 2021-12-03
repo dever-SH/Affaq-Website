@@ -11,7 +11,6 @@
     <link rel="icon" type="image/png" href="Picture/tabIcon.svg">
     <title>حســــابي</title>
 
-    <title>Affaq Website</title>
     <!-- style links -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +21,6 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link href="Js.js" rel="javascript">
     <style>
     .closein {
         cursor: pointer;
@@ -71,6 +69,7 @@
                         $usernameQ = "SELECT username from users where email = '".$em."'";
                         $usernameC = mysqli_query($conn, $usernameQ);
                         $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
+
                         echo'@'.$usernameR["username"];
                     ?>
                 </h3>
@@ -115,7 +114,7 @@
                     $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
 
                     while($blogsR = mysqli_fetch_array($blogsC, MYSQLI_ASSOC)) { 
-                        $idQ = 'SELECT id from blogs where title = "'.$blogsR["btitle"].'"';
+                        $idQ = 'SELECT id from blogs where title = "'.$blogsR["title"].'"';
                         $idC = mysqli_query($conn, $idQ);  
                         $idR = mysqli_fetch_array($idC, MYSQLI_ASSOC);
 

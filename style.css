@@ -499,8 +499,7 @@ input[type=email], input[type=password] {
 }
 
 .infoRec {
-    position: absolute;
-    top: 15%;
+    position: relative;
     height: 75%; width: 20%;
     border-right: 2px solid #9db0a323;
     text-align: center;
@@ -510,24 +509,24 @@ input[type=email], input[type=password] {
 .infoNum {
     position: relative;
     display: inline-block;
-    margin: 80% 0% 0% 5%;
+    margin: 70% 10% 0% 0%;
     text-align: center;
 }
-
+#imgT{right: 20%;}
 .profileImg {
-    position: relative; left: 3%;
+    position: absolute; left: 3%; top: -30%;
     border-radius: 50%;
     border: 5px solid #9aaebb;
     background-image: url("Picture/profileImg.jpeg");
     background-size: cover;
     width: 150px; height: 150px;
-    margin: -15% 0% 0% 0%;
+    margin: 0% 0% 0% 0%;
 }
 
 .Num {margin-left: 90%;}
 
 .pInfo {
-    position:absolute; top: 38%; 
+    position:absolute; top: 0%; 
     width: 20%;
     text-align: center;
 }
@@ -603,7 +602,8 @@ input[type=email], input[type=password] {
 }
 
 .insertNew {
-    margin: 20% 0% 0% 0%;
+    margin-top: 10%;
+    margin-right: 3%;
 }
 
 .insertNew  input {
@@ -613,6 +613,7 @@ input[type=email], input[type=password] {
     height: 30px;
     color: white;
     background-color: #9DB0A3;
+    cursor: pointer;
 }
 
 .insertNew  input:hover {background-color: #687A6E; transition: 1s;}
