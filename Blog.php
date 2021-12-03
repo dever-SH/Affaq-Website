@@ -1,4 +1,4 @@
-<?php $conn = new mysqli("sql104.epizy.com", "epiz_30503805", "HTh9fu4kjdC0J", "epiz_30503805_afaq"); ?>
+<?php $conn = new mysqli("sql302.epizy.com", "epiz_30504062", "HQPBD56vcsv6H", "epiz_30504062_afaq"); ?>
 
 <!DOCTYPE html>
 <html dir="rtl">
