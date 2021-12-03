@@ -137,7 +137,7 @@
                <a href="tripdetail1.php">السياحة البيئية</a>
         </div>
     <div class="country-col">
-        <img class="country-icons" src=Picture/swimmer.png">
+        <img class="country-icons" src="Picture/swimmer.png">
        <a href="tripdetail2.php">السياحة الرياضية</a>
 </div>
     </div>

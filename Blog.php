@@ -102,9 +102,8 @@
                     while($imgR = mysqli_fetch_array($imgC, MYSQLI_ASSOC)) 
                         echo '<img src="../blogsImgs/'.$imgR["img"].'">';
                     echo ' </div>
-                    <button onclick="readMore(\'i'.$idR["id"].'\')" class="myBtn"> أقرأ المزيد </button> 
-                    <img class="myImage" onclick="changeHeart(\'i'.$idR["bid"].'\')" src="Picture/unlike.png">
-                   
+                        <button onclick="readMore(\'i'.$idR["id"].'\')" class="myBtn"> أقرأ المزيد </button> 
+                        <img class="myImage" onclick="changeHeart(\'i'.$idR["id"].'\')" src="Picture/unlike.png">
                         </article> </div>'
                     ;
                 }

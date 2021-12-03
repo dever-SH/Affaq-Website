@@ -55,27 +55,27 @@
     <div class="country-row">
         <div class="country-col">
           <img class="country-icons"src="Picture/saudi.svg">
-          <a href="SaudiArabia.php" target="_blank"> السعودية
+          <a href="saudiArabia.php"> السعودية
         </a>
           </div>
       <div class="country-col">
           <img class="country-icons" src="Picture/Egypet.svg">
-          <a href="egypt.php" target="_blank">
+          <a href="egypt.php">
               مصر </a>
             </div>
             <div class="country-col">
               <img class="country-icons" src="Picture/tunisia.svg">
-              <a href="tunisia.php" target="_blank">
+              <a href="tunisia.php">
               تونس</a>
         </div>
         <div class="country-col">
           <img class="country-icons" src="Picture/Emarat.svg">
-          <a href="Emirates.php" target="_blank">
+          <a href="emirates.php">
             الإمارات</a>
     </div>
     <div class="country-col">
         <img class="country-icons" src="Picture/morroco.svg">
-        <a href="morocco.php" target="_blank">
+        <a href="morocco.php">
       المغرب</a>
 </div>
     </div>
