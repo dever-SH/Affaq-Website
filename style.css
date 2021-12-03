@@ -500,6 +500,7 @@ input[type=email], input[type=password] {
 
 .infoRec {
     position: relative;
+    bottom: 10%;
     height: 75%; width: 20%;
     border-right: 2px solid #9db0a323;
     text-align: center;
@@ -523,10 +524,10 @@ input[type=email], input[type=password] {
     margin: 0% 0% 0% 0%;
 }
 
-.Num {margin-left: 90%;}
+.Num {margin-left: 105%;}
 
 .pInfo {
-    position:absolute; top: 0%; 
+    position:absolute; top: 5%; 
     width: 20%;
     text-align: center;
 }
@@ -602,7 +603,7 @@ input[type=email], input[type=password] {
 }
 
 .insertNew {
-    margin-top: 10%;
+    margin-top: 20%;
     margin-right: 3%;
 }
 
@@ -648,6 +649,7 @@ input[type=email], input[type=password] {
 }
 
 .insertBlog input[type=submit], .insertBlog input[type=reset] {
+    position: relative;
     background-color: #9DB0A3;
     width: 70px;
     height: 25px;
@@ -657,9 +659,10 @@ input[type=email], input[type=password] {
     margin-right: 5%;
     border: none;
 }
-.insertBlog input[type=submit] {margin-right: 25%;}
 
-/* #blogDes {margin-left: 5%;} */
+.insertBlog input[type=submit]:hover, .insertBlog input[type=reset]:hover {background-color: #687A6E; transition: 1s;}
+
+.insertBlog input[type=submit] {margin-right: 25%;}
 
 /* هنا عشان اللي يبي ينسخ او يحدد نص */
 ::selection {
