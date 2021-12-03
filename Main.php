@@ -60,7 +60,7 @@
                     <a href="countriesPage.php">إستكشف دول العالم العربي!</a>
                 </div>
                 <div class="midmenu-col">
-                    <img class="icons" src="Picture/Feather.svg">
+                    <img class="icons" src="Picture/feather.svg">
                     <a href="Blog.php" target="_blank_">أخبرنا عن رحلتك</a>
                 </div>
                 <div class="midmenu-col">
