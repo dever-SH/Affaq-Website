@@ -1,24 +1,18 @@
-/* 
-used Colors from
-https://mycolor.space/?hex=%23687A6E&sub=1
-#687A6E
-#9DB0A3
-#5E7989
-#9AAEBB
-*/
+
 *{
     margin: 0; 
     padding: 0; 
     font-family: 'IBM Plex Sans Arabic', sans-serif;   
 }
-
 input[type=submit], input[type=reset] {
     background-color: #9DB0A3;
     border-radius: 50px;
     border: none;
 }
-
-input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; transition: 1s;}
+input[type=submit]:hover, input[type=reset]:hover{
+    background-color: #687A6E;
+    transition: 1s;
+}
 
 ::-webkit-scrollbar { width: 5px;}
 ::-webkit-scrollbar-thumb { background-color: #687a6e8c; }
@@ -369,12 +363,12 @@ input[type=submit]:hover, input[type=reset]:hover {background-color: #687A6E; tr
     background-color: #9DB0A3;
 }
 .contactSection input[type="email"],.contactSection input[type="text"],
-select#subject,.content{
+select#subject , .contactSection textarea{
     border-radius: 5px;
     background-color: #f7f5f2;
     width: 200px;
 }
-.contactSection select,.content{
+.contactSection select,.contactSection textarea {
     width: 200px;
     text-align: right;
 }
