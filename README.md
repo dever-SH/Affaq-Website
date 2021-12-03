@@ -16,7 +16,7 @@ Shatha Albahouth | 411201985
 
 ## Affaq Pages
 
-### Main Page:
+- Main Page:
 
 In the main page, visitors can easily click a country to explore it or moving to category page of countries,
 also they can choose a country biased on their personal style of travel.
@@ -25,4 +25,46 @@ If they have some experience to share, they can move to a blog page.
 In the buttum of pages, there is a form, in case they have troubles or some notes, they can send an Email for us.
 Moreover, there are our social media accounts and apps to follow us.
 
+###### Overseer of this page: *Anhar*.
+
+
+
+- Countries page: 
+
+A main country page containing section of different countries where visitors of the website click on a country and read a brief description about the country and its famous cities and regions , at the end of the page there is section that take to the category pages.
+
+
+###### Overseer of this page: *Dania*.
+
+
+
+- Categories page: 
+
+category page contains 5 traveling types where visitors can chose one of them and it will take them to a new page with some places recommendations for the traveling type they chose and once they click on book button it will take them to a booking website so they can book for their next trip.
+
+###### Overseer of this page: *Dai*.
+
+
+
+- Profile Page:
+
+Before entering your profile you must log in from the main page, type your email and password and then log in to your page, where you can add blogs and attach photos as well.  If you click on the images on the left side, you will see all the images that you have attached with your blogs.  Happy blogging!
+
+###### Overseer of this page: *Shaden*.
+
+
+
+- blog page:
+
+The blog page is a blog where the traveler writes the details of the trip and adventures during his travel or writes about recommended places for those who want to travel somewhere through our site, and they can put pictures of the trip, read other people’s posts and like their posts.
+
+###### Overseer of this page: *Shatha*.
+
+
+## important note!
+
+if you want try websit on local host, make sure to edit $conn variable in all pages 
+and create database as attach query in (DBQuery.text) file.
+
+###### Thank you, Have a nice Travel :)
 
