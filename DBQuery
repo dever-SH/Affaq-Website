@@ -10,7 +10,8 @@ create table blogs (
 	  email varchar(100) not null,
     title varchar(225) not null UNIQUE,
     descr longtext,
-    content longtext not null
+    content longtext not null,
+    primary key (id)
 );
 
 create table imgs (
