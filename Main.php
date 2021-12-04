@@ -214,7 +214,7 @@
         </form>
     </div>
     <?php
-        $conn = new mysqli("sql302.epizy.com", "epiz_30504062", "HQPBD56vcsv6H", "epiz_30504062_afaq");
+        $conn = new mysqli("localhost", "u265142733_admin", "8JS+@mo$", "u265142733_afaq");
 
         if(isset($_POST['subForm'])) {
             $EmailQ = "SELECT * FROM users WHERE email = \"".$_POST['em']."\"";
