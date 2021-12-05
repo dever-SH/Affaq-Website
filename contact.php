@@ -1,9 +1,9 @@
 <?php
   // for localhost case, use PHPMailer 
     // use PHPMailer\PHPMailer\PHPMailer;
-    error_reporting(-1);
-    ini_set('display_erorrs','On');
-    set_error_handler('var_dump');
+    // error_reporting(-1);
+    // ini_set('display_erorrs','On');
+    // set_error_handler('var_dump');
 
     session_start();
 
@@ -61,17 +61,16 @@ if(isset($_POST['submit']) && $_POST['email'] != NULL)
         $email =$_POST['email'] ;
         $subject = $_POST['subject'];
         $content = $_POST['content'];
-        $header = 'dont replay';
+        $header = ' ';
         $to ='Affaqhelpcenter@gmail.com';
 
-        $text ="الإسم  :".$name."<br>"."عنوان الإيميل  :".$email."<br>"."المحتوى  :".$content;
+        $text ="الإسم  :".$name."\n"."عنوان الإيميل  :".$email."\n"."المحتوى  :".$content;
 
         $statuss = mail($to,$subject,$text,$header);
-        
+
         if( $statuss){
         $_SESSION['status'] = "done";
-        echo"done";
-        // header('Location: Main.php');  
+        header('Location: Main.php');  
         }
        else
            echo"faild";
