@@ -67,6 +67,7 @@ if(isset($_POST['submit']) && $_POST['email'] != NULL)
         $text ="الإسم  :".$name."<br>"."عنوان الإيميل  :".$email."<br>"."المحتوى  :".$content;
 
         $statuss = mail($to,$subject,$text,$header);
+        
         if( $statuss){
         $_SESSION['status'] = "done";
         echo"done";
