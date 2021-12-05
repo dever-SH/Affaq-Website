@@ -1,11 +1,33 @@
 <?php
   // for localhost case, use PHPMailer 
     // use PHPMailer\PHPMailer\PHPMailer;
-    // error_reporting(-1);
-    // ini_set('display_erorrs','On');
-    // set_error_handler('var_dump');
 
     session_start();
+
+    // in live server case 
+
+    if(isset($_POST['submit']) && $_POST['email'] != NULL)
+    { 
+            $name =$_POST['name'] ;
+            $email =$_POST['email'] ;
+            $subject = $_POST['subject'];
+            $content = $_POST['content'];
+            $header = ' ';
+            $to ='Affaqhelpcenter@gmail.com';
+    
+            $text ="الإسم  :".$name."\n\n"."عنوان الإيميل  :\n".$email."\n\n"."المحتوى  :\n".$content;
+    
+            $statuss = mail($to,$subject,$text,$header);
+    
+            if( $statuss){
+            $_SESSION['status'] = "done";
+            header('Location: Main.php');  
+            }
+        else
+            echo"faild";
+            
+    }
+       // in local host case
 
     // if(isset($_POST['submit'])){
  
@@ -53,59 +75,5 @@
     //     exit(json_encode(array("status" => $status, "response" => $response)));
     // }
 
-                                                             // in live server case 
-
-if(isset($_POST['submit']) && $_POST['email'] != NULL)
-{ 
-        $name =$_POST['name'] ;
-        $email =$_POST['email'] ;
-        $subject = $_POST['subject'];
-        $content = $_POST['content'];
-        $header = ' ';
-        $to ='Affaqhelpcenter@gmail.com';
-
-        $text ="الإسم  :".$name."\n"."عنوان الإيميل  :".$email."\n"."المحتوى  :".$content;
-
-        $statuss = mail($to,$subject,$text,$header);
-
-        if( $statuss){
-        $_SESSION['status'] = "done";
-        header('Location: Main.php');  
-        }
-       else
-           echo"faild";
     }
-                                           //store the mails in DB
-
-// session_start();
-// $server = 'localhost';
-// $email = 'root';
-// $subject ='';
-// $content = '';
-// $dbPort = 
-// $dbname = 'affaq' ; 
- 
-// $con = mysqli_connect($server ,$email , $subject , $dbname,'3306',$content ) ;
-
-// if(isset($_POST['submit'])){
- 
-//     if(!empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['content'])){
-       
-//        $email = $_POST['email'] ;
-//        $subject = $_POST['subject'];
-//        $content = $_POST['content'];
-
-//        $query = "insert into comment(email , subject , content) values ('$email' , '$subject' , '$content')";
-
-//        $run = mysqli_query($con , $query) or die(mysqli_error($con));
-
-//        if($run){
-//            $_SESSION['status'] = "done";
-//           header('Location: Main.php');
-//        }
-//        else{
-//            echo"faild";
-//        }
-//     }
-// }
 ?>
