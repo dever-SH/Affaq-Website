@@ -15,7 +15,7 @@
             $header = ' ';
             $to ='Affaqhelpcenter@gmail.com';
     
-            $text ="الإسم  :".$name."\n\n"."عنوان الإيميل  :\n".$email."\n\n"."المحتوى  :\n".$content;
+            $text ="الإسم:\n".$name."\n\n"."عنوان الإيميل:\n".$email."\n\n"."المحتوى:\n".$content;
     
             $statuss = mail($to,$subject,$text,$header);
     
