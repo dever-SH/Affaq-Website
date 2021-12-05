@@ -1,75 +1,80 @@
 <?php
   // for localhost case, use PHPMailer 
-    use PHPMailer\PHPMailer\PHPMailer;
+    // use PHPMailer\PHPMailer\PHPMailer;
+    error_reporting(-1);
+    ini_set('display_erorrs','On');
+    set_error_handler('var_dump');
+
     session_start();
 
-    if(isset($_POST['submit'])){
+    // if(isset($_POST['submit'])){
  
-        if(!empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['content'])){
+    //     if(!empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['content'])){
 
-        $email =$_POST['email'] ;
-        $name =$_POST['name'] ;
-        $subject = $_POST['subject'];
-        $content = $_POST['content'];
-        $text ="الإسم  :".$name."<br>"."عنوان الإيميل  :".$email."<br>"."المحتوى  :".$content;
+    //     $email =$_POST['email'] ;
+    //     $name =$_POST['name'] ;
+    //     $subject = $_POST['subject'];
+    //     $content = $_POST['content'];
+    //     $text ="الإسم  :".$name."<br>"."عنوان الإيميل  :".$email."<br>"."المحتوى  :".$content;
 
-        require_once "PHPMailer\src\PHPMailer.php" ;
-        require_once "PHPMailer\src\SMTP.php";
-        require_once "PHPMailer\src\Exception.php";
+    //     require_once "PHPMailer\src\PHPMailer.php" ;
+    //     require_once "PHPMailer\src\SMTP.php";
+    //     require_once "PHPMailer\src\Exception.php";
 
-        $mail = new PHPMailer();
+    //     $mail = new PHPMailer();
 
-        //SMTP Settings
-        $mail->isSMTP();
-        $mail->Host = "smtp.gmail.com";
-        $mail->SMTPAuth = true;
+    //     //SMTP Settings
+    //     $mail->isSMTP();
+    //     $mail->Host = "smtp.gmail.com";
+    //     $mail->SMTPAuth = true;
 
-        $mail->Username = "Affaqhelpcenter@gmail.com";
-        $mail->Password = 'Affaq12345';
-        $mail->Port = 465; 
-        $mail->SMTPSecure = "ssl"; 
+    //     $mail->Username = "Affaqhelpcenter@gmail.com";
+    //     $mail->Password = 'Affaq12345';
+    //     $mail->Port = 465; 
+    //     $mail->SMTPSecure = "ssl"; 
 
-        //Email Settings
-        $mail->isHTML(true);
-        $mail->setFrom($email,'User');
-        $mail->addAddress("Affaqhelpcenter@gmail.com");
-        $mail->Subject = $subject;
-        $mail->Body = $text;
+    //     //Email Settings
+    //     $mail->isHTML(true);
+    //     $mail->setFrom($email,'User');
+    //     $mail->addAddress("Affaqhelpcenter@gmail.com");
+    //     $mail->Subject = $subject;
+    //     $mail->Body = $text;
 
-        if ($mail->send()) {
-            $_SESSION['status'] = "done";
-            header('Location: Main.php');
-        } else {
-            $status = "failed";
-            $response = "Something is wrong: <br><br>" . $mail->ErrorInfo;
-        }
+    //     if ($mail->send()) {
+    //         $_SESSION['status'] = "done";
+    //         header('Location: Main.php');
+    //     } else {
+    //         $status = "failed";
+    //         $response = "Something is wrong: <br><br>" . $mail->ErrorInfo;
+    //     }
 
-       }
+    //    }
 
-        exit(json_encode(array("status" => $status, "response" => $response)));
-    }
+    //     exit(json_encode(array("status" => $status, "response" => $response)));
+    // }
 
                                                              // in live server case 
 
-// if(isset($_POST['submit']) && $_POST['email'] != NULL)
-// { 
-//         $name =$_POST['name'] ;
-//         $email =$_POST['email'] ;
-//         $subject = $_POST['subject'];
-//         $content = $_POST['content'];
-        
-//         $to ='Affaqhelpcenter@gmail.com';
+if(isset($_POST['submit']) && $_POST['email'] != NULL)
+{ 
+        $name =$_POST['name'] ;
+        $email =$_POST['email'] ;
+        $subject = $_POST['subject'];
+        $content = $_POST['content'];
+        $header = 'dont replay';
+        $to ='Affaqhelpcenter@gmail.com';
 
-//         $text ="الإسم  :".$name."<br>"."عنوان الإيميل  :".$email."<br>"."المحتوى  :".$content;
+        $text ="الإسم  :".$name."<br>"."عنوان الإيميل  :".$email."<br>"."المحتوى  :".$content;
 
-//         mail($to,$subject,$text);
-
-//         $_SESSION['status'] = "done";
-//         header('Location: Main.php');  
-//         }
-//        else
-//            echo"faild";
-       
+        $statuss = mail($to,$subject,$text,$header);
+        if( $statuss){
+        $_SESSION['status'] = "done";
+        echo"done";
+        // header('Location: Main.php');  
+        }
+       else
+           echo"faild";
+    }
                                            //store the mails in DB
 
 // session_start();
