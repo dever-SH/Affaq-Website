@@ -3,7 +3,6 @@
 # Affaq | أفــاق
 <p align="center"> صفحة عربية تساعدك على إكتشاف الوطن العربي وتحديد وجهتك القادمة ومشاركة رحلاتك السابقة </p>
 
-/* ## <p align="center"> Explore our site from here: http://affaq.great-site.net/Main.php </p> */
 
 ## Members | الأعضاء
 
