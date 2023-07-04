@@ -67,5 +67,7 @@ The blog page is a blog where the traveler writes the details of the trip and ad
 
 > https://user-images.githubusercontent.com/73385631/144836963-80206354-a07f-4d1d-9f32-71f3799d93d0.mp4
 
+>> <a href="https://drive.google.com/file/d/1TZVP6ygxxuCV6mhCP9h2o9mel9C_Cs-c/view?usp=sharing
+">Click here to see the whole website</a>
 ###### Thank you, Have a nice Travel :) 
 
